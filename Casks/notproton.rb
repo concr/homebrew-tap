@@ -19,7 +19,7 @@ cask "notproton" do
 
   # Fill in the bundle ID once installed:
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
-  bundle_id "com.notproton.NotProton"
+  bundle_id = "com.notproton.NotProton"
 
   # Find all folders/fileS:
   #   sudo find / -name "*com.notproton.NotProton*" 2> /dev/null
