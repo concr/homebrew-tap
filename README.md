@@ -4,7 +4,18 @@
 
 ### airport-konfigurator
 
-TBD
+```
+brew audit --cask --strict concr/tap/airport-konfigurator
+brew livecheck --cask concr/tap/airport-konfigurator
+
+```
+
+### notproton
+
+```
+brew audit --cask --strict concr/tap/notproton
+brew livecheck --cask concr/tap/notproton
+```
 
 ## Formula
 
