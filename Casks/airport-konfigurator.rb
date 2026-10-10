@@ -15,7 +15,7 @@ cask "airport-konfigurator" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
   
   app "AirPortKonfigurator.app"
 
