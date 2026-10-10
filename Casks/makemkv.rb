@@ -44,5 +44,3 @@ cask "makemkv" do
     https://forum.makemkv.com/forum/viewtopic.php?t=1053
   EOS
 end
-
-
