@@ -14,7 +14,7 @@ cask "makemkv" do
   end
 
   # makemkv runs from 10.7 lion .. but current homebrew is sequoia and up
-  depends_on macos: :sequoia
+  depends_on macos: :lion
 
   app "MakeMKV.app"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
