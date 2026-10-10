@@ -15,6 +15,19 @@ brew audit --cask --strict concr/tap/airport-konfigurator
 brew livecheck --cask concr/tap/airport-konfigurator
 ```
 
+### makemkv
+
+```
+# show remote recipe 
+brew cat --cask concr/tap/makemkv
+
+# lint remote recipe
+brew audit --cask --strict concr/tap/makemkv
+
+# check upstream for new version
+brew livecheck --cask concr/tap/makemkv
+```
+
 ### notproton
 
 ```
