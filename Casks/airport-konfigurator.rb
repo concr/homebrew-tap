@@ -21,11 +21,13 @@ cask "airport-konfigurator" do
 
   # Fill in the bundle ID once installed:
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/AirPort Konfigurator.app"
-  # then replace BUNDLE_ID below.
+  bundle_id "de.iwerkstatt.airportkonfigurator"
+
+  # Find all folders/fileS:
+  #   sudo find / -name "*de.iwerkstatt.airportkonfigurator*" 2> /dev/null
   zap trash: [
-    "~/Library/Application Support/Logi/LogiPluginService/Temp/ApplicationIcons/de.iwerkstatt.airportkonfigurator.png",
-    "~/Library/Application Scripts/de.iwerkstatt.airportkonfigurator",
-    "~/Library/Containers/de.iwerkstatt.airportkonfigurator",
+    "~/Library/Application Scripts/#{bundke_id}",
+    "~/Library/Containers/#{bundke_id}",
   ]
 
   caveats <<~EOS

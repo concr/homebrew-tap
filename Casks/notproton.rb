@@ -18,13 +18,17 @@ cask "notproton" do
   app "NotProton.app"
 
   # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/AirPort Konfigurator.app"
-  # then replace BUNDLE_ID below.
-  #zap trash: [
-  #  "~/Library/Application Support/Logi/LogiPluginService/Temp/ApplicationIcons/de.iwerkstatt.airportkonfigurator.png",
-  #  "~/Library/Application Scripts/de.iwerkstatt.airportkonfigurator",
-  #  "~/Library/Containers/de.iwerkstatt.airportkonfigurator",
-  #]
+  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
+  bundle_id "com.notproton.NotProton"
+
+  # Find all folders/fileS:
+  #   sudo find / -name "*com.notproton.NotProton*" 2> /dev/null
+  zap trash: [
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}.binarycookies",
+    "~/Library/Caches/#{bundle_id}",
+  ]
 
   caveats <<~EOS
     #{token} is not notarized by Apple. On first launch macOS will block it:
