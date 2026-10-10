@@ -22,7 +22,7 @@ cask "notproton" do
   bundle_id = "com.notproton.NotProton"
 
   # Find all folders/fileS:
-  #   sudo find / -name "*com.notproton.NotProton*" 2> /dev/null
+  #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
   zap trash: [
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/HTTPStorages/#{bundle_id}",

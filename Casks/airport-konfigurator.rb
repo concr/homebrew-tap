@@ -26,7 +26,7 @@ cask "airport-konfigurator" do
   bundle_id = "de.iwerkstatt.airportkonfigurator"
 
   # Find all folders/fileS:
-  #   sudo find / -name "*de.iwerkstatt.airportkonfigurator*" 2> /dev/null
+  #   sudo find ~/Library /Library /private/var/folders -iname "*de.iwerkstatt.airportkonfigurator*" 2>/dev/null
   zap trash: [
     "~/Library/Application Scripts/#{bundle_id}",
     "~/Library/Containers/#{bundle_id}",
