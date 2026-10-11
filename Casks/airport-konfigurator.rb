@@ -45,7 +45,6 @@ cask "airport-konfigurator" do
     "Open Anyway". This is only needed once.
 
     #{token} requires macOS 26.6 or newer.
-EOS
   EOS
 
   # caveats do
