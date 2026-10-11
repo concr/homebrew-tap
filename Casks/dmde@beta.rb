@@ -3,7 +3,7 @@ cask "dmde@beta" do
   version "4.5.0,849"
 
   # Fill in: curl -sL https://dmde.com/download/dmde-4-5-0-849-beta-mac64-gui.dmg | shasum -a 256
-  sha256 "ce26f4bda9e377740e6624139d5e7b24a188b5cfd125dc4888b3d63bdcf26961"
+  sha256 "05e89b2ab4160a0875eaa462cdf015684c21599759cd897a7ceee18e6a0c9f2b"
 
   url "https://dmde.com/download/dmde-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}-beta-mac64-gui.dmg"
   name "DMDE"
