@@ -20,7 +20,7 @@ cask "dmde@beta" do
 
   # dmde runs from 10.14 mojave but 13.0 ventura is the lowest we can use
   depends_on macos: :ventura
-  app "dmde.app"
+  app "dmde.app", target: "DMDE.app"
   conflicts_with cask: "dmde"
 
   # Fill in the bundle ID once installed:

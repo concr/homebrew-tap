@@ -15,6 +15,7 @@ brew livecheck --tap concr/tap
 * crystalrcm
 * dmde
 * dmde@beta
+* m5burner
 * makemkv-preservation
 * notproton
 * ultimate-lemmings
@@ -34,6 +35,6 @@ brew livecheck --cask concr/tap/[CASK]
 
 ## Formula
 
-### TBD
-
-TBD
+* TODO: DMDE console
+  * https://dmde.com/download/dmde-4-4-6-846-mac64-con.dmg
+  * https://dmde.com/download/dmde-4-5-0-849-beta-mac64-con.dmg

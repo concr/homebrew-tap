@@ -1,0 +1,45 @@
+cask "notproton" do
+
+  version "1.1.2"
+
+  # Fill in: curl -sL https://github.com/cryptspeak/m5uploader/releases/download/v1.1.2/m5uploader-macos.zip | shasum -a 256
+  sha256 "69d9e8c1689f0c450a3f800efd0024b7ca044f64dd5acafa347c81a4d3a6b1ba"
+
+  url "https://github.com/cryptspeak/m5uploader/releases/download/v#{version}/m5uploader-macos.zip"
+  name "M5Uploader"
+  desc "A minimal, security-conscious replacement for m5Burner."
+  homepage "https://github.com/cryptspeak/m5uploader"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: :tahoe
+  app "m5uploader-macos.app", target: "M5Uploader.app"
+
+  # Fill in the bundle ID once installed:
+  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
+#  bundle_id = "com.notproton.NotProton"
+
+  # Find all folder / files:
+  #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
+ # zap trash: [
+ #   "~/Library/Application Support/#{bundle_id}",
+ #   "~/Library/Caches/#{bundle_id}",
+ #   "~/Library/HTTPStorages/#{bundle_id}",
+ #   "~/Library/Preferences/#{bundle_id}.plist",
+ #   "~/Library/Saved Application State/#{bundle_id}.savedState",
+ # ]
+
+#  caveats <<~EOS
+#    #{token} is not notarized by Apple. On first launch macOS will block it:
+##    open it once, then go to System Settings → Privacy & Security and click
+#    "Open Anyway". This is only needed once.
+#  EOS
+
+  # caveats do
+  #   unsigned_accessibility 
+  # end
+
+end
