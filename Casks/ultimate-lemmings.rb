@@ -20,6 +20,10 @@ cask "ultimate-lemmings" do
 
   app "Ultimate Lemmings.app"
 
+  postflight_steps do
+    remove "__MACOSX", recursive: true
+  end
+
   # Fill in the bundle ID once installed:
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
   bundle_id = "com.notproton.NotProton"
