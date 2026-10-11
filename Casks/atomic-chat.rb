@@ -2,8 +2,8 @@ cask "atomic-chat" do
 
   version "2.2.3"
 
-  # Fill in: curl -sL https://github.com/prayerie/CrystalRCM/releases/download/1.0.0/CrystalRCM.1.0.0.dmg | shasum -a 256
-  sha256 "54c6ba29cb976bbd156970c2e710586883072e737f7c54615cb5c8b455ef6cc7"
+  # Fill in: curl -sL https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v2.2.3/Atomic.Chat_2.2.3_universal.dmg | shasum -a 256
+  sha256 "8b0eca28792c727b1f155fb234e9c6a4f09d8d13f68f405174144a447962289c"
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
