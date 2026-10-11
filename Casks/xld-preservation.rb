@@ -16,7 +16,7 @@ cask "xld-preservation" do
 
   auto_updates true
 
-  # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
+  # xld runs from 10.4 lion but homebrew needs 15.0 sequoia or higher
   depends_on macos: :sequoia
 
   conflicts_with cask: "xld"
