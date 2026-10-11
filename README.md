@@ -9,8 +9,6 @@ brew tap-info concr/tap
 
 ### airport-konfigurator
 
-AirPort Konfigurator
-
 Configure and manage AirPort base stations without AirPort Utility.
 
 ```bash
@@ -25,8 +23,6 @@ brew livecheck --cask concr/tap/airport-konfigurator
 ```
 
 ### makemkv
-
-MakeMKV
 
 Video format converter, otherwise called transcoder.
 
@@ -43,8 +39,6 @@ brew livecheck --cask concr/tap/makemkv-preservation
 
 ### notproton
 
-NotProton
-
 Enables the Steam Play experience from Linux Steam in the macOS Steam client.
 
 ```bash
@@ -59,8 +53,6 @@ brew livecheck --cask concr/tap/notproton
 ```
 
 ### xld
-
-XLD
 
 Lossless audio decoder.
 
