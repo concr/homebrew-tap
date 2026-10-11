@@ -12,7 +12,7 @@ cask "dmde@beta" do
 
   livecheck do
     url "https://dmde.com/download.html"
-    regex(/href=["']?[^"' >]*?dmde[._-]v?(\d+(?:-\d+)+)-(\d+)-mac64-gui\.dmg/i)
+    regex(/href=["']?[^"' >]*?dmde[._-]v?(\d+(?:-\d+)+)-(\d+)-beta-mac64-gui\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]}" }
     end
