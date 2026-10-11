@@ -1,4 +1,4 @@
-cask "notproton" do
+cask "m5burner" do
 
   version "1.1.2"
 
