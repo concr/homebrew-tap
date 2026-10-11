@@ -18,11 +18,18 @@ cask "newshosting" do
   depends_on macos: :ventura
   app "Newshosting.app"
 
-  # Fill in after first install:
-  #   mdls -name kMDItemCFBundleIdentifier -r /Applications/Newshosting.app
-  # bundle_id = "…"
-  # zap trash: [
-  #   "~/Library/Application Support/Newshosting",
-  #   "~/Library/Preferences/#{bundle_id}.plist",
-  # ]
+  # Fill in the bundle ID once installed:
+  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Newshosting.app"
+  bundle_id = "com.newshosting.client"
+
+  # Find all folder / files:
+  #   sudo find ~/Library /Library /private/var/folders -iname "*com.newshosting.client*" 2>/dev/null
+  zap trash: [
+    "~/Library/Application Support/#{bundle_id}",
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
+  ]
+
 end
