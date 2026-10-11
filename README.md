@@ -32,13 +32,13 @@ Video format converter, otherwise called transcoder.
 
 ```bash
 # show remote recipe 
-brew cat --cask concr/tap/makemkv
+brew cat --cask concr/tap/makemkv-preservation
 
 # lint remote recipe
-brew audit --cask --strict concr/tap/makemkv
+brew audit --cask --strict concr/tap/makemkv-preservation
 
 # check upstream for new version
-brew livecheck --cask concr/tap/makemkv
+brew livecheck --cask concr/tap/makemkv-preservation
 ```
 
 ### notproton
@@ -66,13 +66,13 @@ Lossless audio decoder.
 
 ```bash
 # show remote recipe 
-brew cat --cask concr/tap/xld
+brew cat --cask concr/tap/xld-preservation
 
 # lint remote recipe
-brew audit --cask --strict concr/tap/xld
+brew audit --cask --strict concr/tap/xld-preservation
 
 # check upstream for new version
-brew livecheck --cask concr/tap/xld
+brew livecheck --cask concr/tap/xld-preservation
 ```
 
 ## Formula

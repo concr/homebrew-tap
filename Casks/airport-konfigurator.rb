@@ -1,4 +1,4 @@
-cask "concr-airport-konfigurator" do
+cask "airport-konfigurator" do
 
   version "1.0"
 

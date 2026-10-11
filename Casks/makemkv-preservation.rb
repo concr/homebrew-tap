@@ -1,4 +1,4 @@
-cask "concr-makemkv" do
+cask "makemkv-preservation" do
 
   version "2.0.0"
 

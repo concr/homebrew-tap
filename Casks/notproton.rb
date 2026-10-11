@@ -1,4 +1,4 @@
-cask "concr-notproton" do
+cask "notproton" do
 
   version "1.1.4"
   # Fill in: curl -sL https://github.com/NotProtonNot/NotProton/releases/download/v1.1.4/NotProton.zip | shasum -a 256
