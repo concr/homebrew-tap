@@ -15,12 +15,13 @@ cask "m5uploader" do
     strategy :github_latest
   end
 
-  depends_on macos: :tahoe
+  # m4uploader runs from 11.0 xxx but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura
   app "m5uploader-macos.app", target: "M5Uploader.app"
 
   # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
-#  bundle_id = "com.notproton.NotProton"
+  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/M5uploader.app"
+  bundle_id = ""
 
   # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null

@@ -17,6 +17,7 @@ brew livecheck --tap concr/tap
 * dmde@beta
 * m5burner
 * makemkv-preservation
+* newshosting
 * notproton
 * ultimate-lemmings
 * ultimate-lemmings@slim

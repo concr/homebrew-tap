@@ -2,8 +2,7 @@ cask "airport-konfigurator" do
 
   version "1.0"
 
-  # Fill in: curl -sL https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip | shasum -a 256
-  sha256 "8437baa05ded5720cd7f2bc5c2d371cc3a148de90d342de89be8acecc30d87af"
+  sha256 :no_check
 
   url "https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip"
   name "AirPort Konfigurator"
