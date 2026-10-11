@@ -25,16 +25,17 @@ cask "ultimate-lemmings@slim" do
   end
 
   # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
-  bundle_id = "com.notproton.NotProton"
+  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Ultimate Lemmings.app"
+  bundle_id = "academy.glasscode.lemmings"
 
-  # Find all folders/fileS:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
+  # Find all folder / files:
+  #   sudo find ~/Library /Library /private/var/folders -iname "*academy.glasscode.lemmings*" 2>/dev/null
   zap trash: [
-    "~/Library/Preferences/#{bundle_id}.plist",
-    "~/Library/HTTPStorages/#{bundle_id}",
-    "~/Library/HTTPStorages/#{bundle_id}.binarycookies",
     "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
+
 
 end

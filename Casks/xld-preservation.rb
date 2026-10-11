@@ -16,7 +16,7 @@ cask "xld-preservation" do
 
   auto_updates true
 
-  # xld runs from 10.4 lion but homebrew needs 15.0 sequoia or higher
+  # ultimate lemmings runs from 10.4 lion but homebrew needs 15.0 sequoia or higher
   depends_on macos: :sequoia
 
   conflicts_with cask: "xld"
@@ -31,15 +31,16 @@ cask "xld-preservation" do
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/XLD.app"
   bundle_id = "jp.tmkk.XLD"
 
-  # Find all folders/fileS:
+  # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*jp.tmkk.XLD*" 2>/dev/null
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/#{bundle_id}.sfl*",
-    "~/Library/Application Support/XLD",
     "~/Library/Caches/#{bundle_id}",
     "~/Library/HTTPStorages/#{bundle_id}",
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
+
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/#{bundle_id}.sfl*",
+    "~/Library/Application Support/XLD",
   ]
 
   caveats <<~EOS

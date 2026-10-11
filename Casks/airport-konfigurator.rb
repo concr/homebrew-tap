@@ -27,9 +27,14 @@ cask "airport-konfigurator" do
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/AirPort Konfigurator.app"
   bundle_id = "de.iwerkstatt.airportkonfigurator"
 
-  # Find all folders/fileS:
+  # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*de.iwerkstatt.airportkonfigurator*" 2>/dev/null
   zap trash: [
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
+
     "~/Library/Application Scripts/#{bundle_id}",
     "~/Library/Containers/#{bundle_id}",
   ]

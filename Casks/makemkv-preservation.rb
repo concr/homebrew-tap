@@ -31,12 +31,15 @@ cask "makemkv-preservation" do
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
   bundle_id = "com.makemkv.MakeMKV"
 
-  # Find all folders/fileS:
+  # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*com.makemkv.MakeMKV*" 2>/dev/null
   zap trash: [
-    "~/Library/MakeMKV",
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
     "~/Library/Preferences/#{bundle_id}.plist",
-    "~/Library/Saved Application State/com.makemkv.MakeMKV.savedState",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
+
+    "~/Library/MakeMKV",
     "~/Movies/.MakeMKV",
   ]
 
