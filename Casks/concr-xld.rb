@@ -6,7 +6,7 @@ cask "concr-xld" do
   url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg"
   name "X Lossless Decoder"
   name "XLD"
-  desc "Lossless audio decoder"
+  desc "Lossless audio decoder."
   homepage "https://tmkk.undo.jp/xld/index_e.html"
 
   livecheck do
@@ -17,7 +17,7 @@ cask "concr-xld" do
   auto_updates true
 
   # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sequoia:
+  depends_on macos: :sequoia
 
   conflicts_with cask: "xld"
 

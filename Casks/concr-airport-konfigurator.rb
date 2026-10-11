@@ -11,7 +11,7 @@ cask "concr-airport-konfigurator" do
   # without changing the URL. Bump `version` and `sha256` together.
   url "https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip"
   name "AirPort Konfigurator"
-  desc "Configure and manage AirPort base stations without AirPort Utility"
+  desc "Configure and manage AirPort base stations without AirPort Utility."
   homepage "https://www.iwerkstatt-repair.de/software/airport-konfigurator/"
 
   livecheck do
