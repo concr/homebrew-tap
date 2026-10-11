@@ -15,8 +15,9 @@ cask "atomic-chat" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: :highsierra
+  
+  # atomic chat runs from 10.13 high sierra but homebrew needs 15.0 sequoia or higher
+  depends_on macos: :sequoia
 
   app "Atomic Chat.app"
 

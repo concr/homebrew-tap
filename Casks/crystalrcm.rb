@@ -16,7 +16,7 @@ cask "crystalrcm" do
   end
 
   # ultimate lemmings runs from 12.1 monterey but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :monterey
+  depends_on macos: :sequoia
 
   app "CrystalRCM.app"
 
