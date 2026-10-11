@@ -26,6 +26,7 @@ cask "airport-konfigurator" do
   # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*de.iwerkstatt.airportkonfigurator*" 2>/dev/null
   zap trash: [
+    "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
     "~/Library/HTTPStorages/#{bundle_id}",
     "~/Library/Preferences/#{bundle_id}.plist",

@@ -13,6 +13,8 @@ brew livecheck --tap concr/tap
 * airport-konfigurator
 * atomic-chat
 * crystalrcm
+* dmde
+* dmde@beta
 * makemkv-preservation
 * notproton
 * ultimate-lemmings

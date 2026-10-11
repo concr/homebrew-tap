@@ -26,6 +26,7 @@ cask "notproton" do
   # Find all folder / files:
   #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
   zap trash: [
+    "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
     "~/Library/HTTPStorages/#{bundle_id}",
     "~/Library/Preferences/#{bundle_id}.plist",
