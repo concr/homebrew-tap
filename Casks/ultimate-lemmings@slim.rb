@@ -6,8 +6,8 @@ cask "ultimate-lemmings@slim" do
   sha256 "3237ad68355107a6f6926c148bacc14312a7989f8a22be82d117f988cd646b26"
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version}/UltimateLemmings-#{version}-build76-slim.zip"
-  name "Ultimate Lemmings (slim / no soundtracks included)"
-  desc "Unofficial native macOS port of the 2D Lemmings games."
+  name "Ultimate Lemmings (slim)"
+  desc "Unofficial native macOS port of the 2D Lemmings games. No soundtracks included."
   homepage "https://github.com/ErikVeland/Lemmings"
 
   livecheck do
