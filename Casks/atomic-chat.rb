@@ -5,8 +5,7 @@ cask "atomic-chat" do
   # Fill in: curl -sL https://github.com/prayerie/CrystalRCM/releases/download/1.0.0/CrystalRCM.1.0.0.dmg | shasum -a 256
   sha256 "54c6ba29cb976bbd156970c2e710586883072e737f7c54615cb5c8b455ef6cc7"
 
-  url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg",
-    verified: "https://github.com/AtomicBot-ai/Atomic-Chat/"
+  url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
   desc "Local AI app and inference engine for agents."
   homepage "https://atomic.chat"
