@@ -1,4 +1,4 @@
-cask "m5burner" do
+cask "m5uploader" do
 
   version "1.1.2"
 
