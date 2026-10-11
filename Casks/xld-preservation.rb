@@ -16,8 +16,8 @@ cask "xld-preservation" do
 
   auto_updates true
 
-  # ultimate lemmings runs from 10.4 lion but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sequoia
+  # ultimate lemmings runs from 10.4 lion but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura
 
   conflicts_with cask: "xld"
 

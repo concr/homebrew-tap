@@ -15,8 +15,8 @@ cask "atomic-chat" do
     strategy :github_latest
   end
   
-  # atomic chat runs from 10.13 high sierra but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sequoia
+  # atomic chat runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura
 
   app "Atomic Chat.app"
 

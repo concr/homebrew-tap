@@ -15,8 +15,8 @@ cask "makemkv-preservation" do
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
-  # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :bigsur
+  # makemkv runs from 10.7 lion but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventury
 
   conflicts_with cask: "makemkv"
 

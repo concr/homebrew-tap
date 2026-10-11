@@ -16,8 +16,8 @@ cask "ultimate-lemmings" do
     strategy :github_latest
   end
 
-  # ultimate lemmings runs from 12.3 monterey but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sequoia
+  # ultimate lemmings runs from 12.3 monterey but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura
 
   app "Ultimate Lemmings.app"
 
