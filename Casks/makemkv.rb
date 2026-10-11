@@ -1,4 +1,4 @@
-cask "makemkv" do
+cask "c-makemkv" do
   version "2.0.0"
   # Fill in: curl -sL https://www.makemkv.com/download/makemkv_v2.0.0_osx.dmg | shasum -a 256
   sha256 "e3adad095fb9344e23870d99fd9770a187816332c5a2aa1b226c0bd4a922867a"
@@ -14,8 +14,7 @@ cask "makemkv" do
   end
 
   # makemkv runs from 10.7 lion .. but current homebrew is sequoia and up
-  depends_on macos: :sequoia
-
+  depends_on macos: ">= :sequoia"
   app "MakeMKV.app"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmccextr"

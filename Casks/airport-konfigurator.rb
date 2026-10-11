@@ -1,4 +1,4 @@
-cask "airport-konfigurator" do
+cask "c-airport-konfigurator" do
   version "1.0"
   # Fill in: curl -sL https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip | shasum -a 256
   # sha256 "8437baa05ded5720cd7f2bc5c2d371cc3a148de90d342de89be8acecc30d87af"
@@ -17,8 +17,7 @@ cask "airport-konfigurator" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :tahoe
-  
+  depends_on macos: ">= :tahoe"
   app "AirPortKonfigurator.app"
 
   # Fill in the bundle ID once installed:
