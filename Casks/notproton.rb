@@ -16,7 +16,6 @@ cask "notproton" do
   end
 
   depends_on macos: :tahoe
-
   app "NotProton.app"
 
   # Fill in the bundle ID once installed:

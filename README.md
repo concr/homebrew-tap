@@ -4,7 +4,7 @@
 # list tap
 brew tap-info concr/tap
 
-# check versions
+# check upstream for new versions
 brew livecheck --tap concr/tap
 ```
 
@@ -25,8 +25,8 @@ brew livecheck --tap concr/tap
 # show remote recipe 
 brew cat --cask concr/tap/[CASK]
 
-# lint remote recipe
-brew audit --cask --strict concr/tap/[CASK]
+# strict check recipe
+brew audit --cask --new concr/tap/[CASK]
 
 # check upstream for new version
 brew livecheck --cask concr/tap/[CASK]

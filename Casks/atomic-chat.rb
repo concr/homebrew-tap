@@ -17,7 +17,6 @@ cask "atomic-chat" do
   
   # atomic chat runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
   depends_on macos: :ventura
-
   app "Atomic Chat.app"
 
   # Fill in the bundle ID once installed:

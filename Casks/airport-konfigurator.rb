@@ -16,7 +16,6 @@ cask "airport-konfigurator" do
   end
 
   depends_on macos: :tahoe
-
   app "AirPortKonfigurator.app"
 
   # Fill in the bundle ID once installed:

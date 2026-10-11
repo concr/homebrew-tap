@@ -17,6 +17,7 @@ cask "ultimate-lemmings@slim" do
 
   # ultimate lemmings runs from 12.3 monterey but 13.0 ventura is the lowest we can use
   depends_on macos: :ventura
+  conflicts_with cask: "ultimate-lemmings"
 
   app "Ultimate Lemmings.app"
 

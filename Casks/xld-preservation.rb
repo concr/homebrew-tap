@@ -20,7 +20,6 @@ cask "xld-preservation" do
   depends_on macos: :ventura
 
   conflicts_with cask: "xld"
-
   app "XLD.app"
 
   command_wrapper "xld",
