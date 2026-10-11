@@ -11,6 +11,7 @@ brew livecheck --tap concr/tap
 ## Casks
 
 * airport-konfigurator
+* atomic-chat
 * crystalrcm
 * makemkv-preservation
 * notproton

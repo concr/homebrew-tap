@@ -6,10 +6,11 @@ cask "ultimate-lemmings@slim" do
   # Fill in: curl -sL https://github.com/ErikVeland/Lemmings/releases/download/v1.9.2/UltimateLemmings-1.9.2-build77-slim.zip | shasum -a 256
   sha256 "a7cf15e7cf54b20e0e85e7aacd1491de56a577bbacbdaae89e07debb3dda5eb7"
 
-  url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version}/UltimateLemmings-#{version}-#{version_build}-slim.zip"
+  url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version}/UltimateLemmings-#{version}-#{version_build}-slim.zip",
+    verified: "https://github.com/ErikVeland/Lemmings"
   name "Ultimate Lemmings (slim)"
-  desc "Unofficial native macOS port of the 2D Lemmings games. No soundtracks included."
-  homepage "https://github.com/ErikVeland/Lemmings"
+  desc "Unofficial native macOS port of the 2D Lemmings games. All soundtracks included."
+  homepage "https://www.reddit.com/r/macgaming/comments/1x0myc9/ultimate_lemmings_all_2d_lemmings_for_modern_macs/"
 
   livecheck do
     url :url
@@ -17,7 +18,7 @@ cask "ultimate-lemmings@slim" do
   end
 
   # ultimate lemmings runs from 12.3 monterey but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sequoia
+  depends_on macos: :monterey
 
   app "Ultimate Lemmings.app"
 

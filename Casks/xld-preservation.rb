@@ -3,7 +3,8 @@ cask "xld-preservation" do
   version "20250302"
   sha256 "0032a5470ea4e32a11a35b8077ebf4986102891f8eb82743094f2c6621ad8aeb"
 
-  url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg"
+  url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg",
+    verified: "https://downloads.sourceforge.net/xld/"
   name "X Lossless Decoder"
   name "XLD"
   desc "Lossless audio decoder."
