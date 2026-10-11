@@ -1,11 +1,12 @@
 cask "ultimate-lemmings" do
 
   version "1.9.2"
+  version_build = "build77"
 
   # Fill in: curl -sL https://github.com/ErikVeland/Lemmings/releases/download/v1.9.2/UltimateLemmings-1.9.2-build77.zip | shasum -a 256
   sha256 "78458cf2756934ad64cda83bf48fd3ab9f983cdd48ec2c0405d13290d100f789"
 
-  url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version}/UltimateLemmings-#{version}-build76.zip"
+  url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version}/UltimateLemmings-#{version}-#{version_build}.zip"
   name "Ultimate Lemmings"
   desc "Unofficial native macOS port of the 2D Lemmings games. All soundtracks included."
   homepage "https://github.com/ErikVeland/Lemmings"
