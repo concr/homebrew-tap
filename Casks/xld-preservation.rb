@@ -31,6 +31,8 @@ cask "xld-preservation" do
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/XLD.app"
   bundle_id = "jp.tmkk.XLD"
 
+  # Find all folders/fileS:
+  #   sudo find ~/Library /Library /private/var/folders -iname "*jp.tmkk.XLD*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/#{bundle_id}.sfl*",
     "~/Library/Application Support/XLD",
