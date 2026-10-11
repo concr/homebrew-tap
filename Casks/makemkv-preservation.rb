@@ -16,7 +16,7 @@ cask "makemkv-preservation" do
   end
 
   # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   conflicts_with cask: "makemkv"
 
