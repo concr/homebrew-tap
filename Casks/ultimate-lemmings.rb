@@ -12,7 +12,15 @@ cask "ultimate-lemmings" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^UltimateLemmings[._-]v?(\d+(?:\.\d+)+)[._-](build\d+)\.zip$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
   # ultimate lemmings runs from 12.3 monterey but 13.0 ventura is the lowest we can use
