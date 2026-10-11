@@ -1,8 +1,11 @@
 # homebrew-tap
 
 ```bash
-# list my tap
+# list tap
 brew tap-info concr/tap
+
+# check versions
+brew livecheck --tap concr/tap
 ```
 
 ## Casks
