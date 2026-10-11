@@ -1,4 +1,4 @@
-cask "ultimater-lemmings" do
+cask "ultimate-lemmings" do
 
   version "1.9.1"
 
