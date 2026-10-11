@@ -14,7 +14,8 @@ cask "concr-notproton" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
+
   app "NotProton.app"
 
   # Fill in the bundle ID once installed:
@@ -35,4 +36,5 @@ cask "concr-notproton" do
     open it once, then go to System Settings → Privacy & Security and click
     "Open Anyway". This is only needed once.
   EOS
+
 end

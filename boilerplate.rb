@@ -155,9 +155,9 @@ cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
   # conflicts_with cask: ["my-app@beta", "my-app@nightly"]
 
   # macOS versions. Symbols: :big_sur, :monterey, :ventura, :sonoma, :sequoia, :tahoe, …
-  # depends_on macos: ">= :sonoma"       # minimum
-  # depends_on macos: :tahoe             # EXACTLY this version (rarely wanted)
-  # depends_on maximum_macos: :sequoia   # maximum
+  # depends_on macos: :sonoma            # minimum: Sonoma or newer
+  # depends_on maximum_macos: :sequoia   # maximum: Sequoia or older
+  # (The old string form ">= :sonoma" still works but is deprecated.)
   # depends_on :macos                    # macOS only, any version
   #
   # depends_on arch: :arm64              # or :x86_64

@@ -15,9 +15,14 @@ cask "concr-xld" do
   end
 
   auto_updates true
-  depends_on :macos
+
+  # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
+  depends_on macos: :sequoia:
+
   conflicts_with cask: "xld"
+
   app "XLD.app"
+
   command_wrapper "xld",
     executable: "#{appdir}/XLD.app/Contents/MacOS/XLD",
     args: "--cmdline"
@@ -35,9 +40,14 @@ cask "concr-xld" do
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
 
-  caveats <<~EOS
-    #{token} is not notarized by Apple. On first launch macOS will block it:
-    open it once, then go to System Settings → Privacy & Security and click
-    "Open Anyway". This is only needed once.
-  EOS
+#  caveats <<~EOS
+#    #{token} is not notarized by Apple. On first launch macOS will block it:
+#    open it once, then go to System Settings → Privacy & Security and click
+#    "Open Anyway". This is only needed once.
+#  EOS
+
+  caveats do
+    unsigned_accessibility 
+  end
+
 end

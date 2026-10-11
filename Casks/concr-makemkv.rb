@@ -15,10 +15,13 @@ cask "concr-makemkv" do
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
-  # makemkv runs from 10.7 lion .. but current homebrew is sequoia and up
-  depends_on macos: ">= :sequoia"
+  # xld runs from 10.7 lion but homebrew needs 15.0 sequoia or higher
+  depends_on macos: :sequoia
+
   conflicts_with cask: "makemkv"
+
   app "MakeMKV.app"
+
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmccextr"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmgplsrv"
@@ -45,4 +48,5 @@ cask "concr-makemkv" do
     #{token} is free while in beta. Get your serial here:
     https://forum.makemkv.com/forum/viewtopic.php?t=1053
   EOS
+
 end
