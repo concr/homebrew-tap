@@ -3,7 +3,7 @@ cask "crystalrcm" do
   version "1.0.0"
 
   # Fill in: curl -sL https://github.com/prayerie/CrystalRCM/releases/download/1.0.0/CrystalRCM.1.0.0.dmg | shasum -a 256
-  sha256 "dabd725e5409b9dbc8fa8ab4e39b54d28ea6a2fabf647ae9801e2a52dc2f64f4"
+  sha256 "54c6ba29cb976bbd156970c2e710586883072e737f7c54615cb5c8b455ef6cc7"
 
   url "https://github.com/prayerie/CrystalRCM/releases/download/#{version}/CrystalRCM.#{version}.dmg"
   name "CrystalRCM"
