@@ -49,4 +49,8 @@ cask "concr-makemkv" do
     https://forum.makemkv.com/forum/viewtopic.php?t=1053
   EOS
 
+  # caveats do
+  #   unsigned_accessibility 
+  # end
+
 end

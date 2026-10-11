@@ -37,4 +37,8 @@ cask "concr-notproton" do
     "Open Anyway". This is only needed once.
   EOS
 
+  # caveats do
+  #   unsigned_accessibility 
+  # end
+
 end

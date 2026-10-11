@@ -40,14 +40,14 @@ cask "concr-xld" do
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
 
-#  caveats <<~EOS
-#    #{token} is not notarized by Apple. On first launch macOS will block it:
-#    open it once, then go to System Settings → Privacy & Security and click
-#    "Open Anyway". This is only needed once.
-#  EOS
+  caveats <<~EOS
+    #{token} is not notarized by Apple. On first launch macOS will block it:
+    open it once, then go to System Settings → Privacy & Security and click
+    "Open Anyway". This is only needed once.
+  EOS
 
-  caveats do
-    unsigned_accessibility 
-  end
+  # caveats do
+  #   unsigned_accessibility 
+  # end
 
 end

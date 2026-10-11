@@ -40,4 +40,8 @@ cask "concr-airport-konfigurator" do
     "Open Anyway". This is only needed once.
   EOS
 
+  # caveats do
+  #   unsigned_accessibility 
+  # end
+
 end
