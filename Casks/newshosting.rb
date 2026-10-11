@@ -7,10 +7,10 @@ cask "newshosting" do
   url "https://client-index.newshosting.com/nh/latest/newshosting.dmg"
   name "Newshosting"
   desc "Usenet newsreader and downloader client."
-  homepage "https://www.newshosting.com/"
+  homepage "https://client-index.newshosting.com/nh/"
 
   livecheck do
-    url "https://client-index.newshosting.com/nh/"
+    url :homepage
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 

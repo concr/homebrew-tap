@@ -15,7 +15,7 @@ brew livecheck --tap concr/tap
 * crystalrcm
 * dmde
 * dmde@beta
-* m5burner
+* m5uploader
 * makemkv-preservation
 * newshosting
 * notproton
