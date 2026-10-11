@@ -1,5 +1,7 @@
-cask "c-airport-konfigurator" do
+cask "concr-airport-konfigurator" do
+
   version "1.0"
+
   # Fill in: curl -sL https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip | shasum -a 256
   # sha256 "8437baa05ded5720cd7f2bc5c2d371cc3a148de90d342de89be8acecc30d87af"
   # Use `sha256 :no_check` when URL is unversioned.
@@ -36,4 +38,5 @@ cask "c-airport-konfigurator" do
     open it once, then go to System Settings → Privacy & Security and click
     "Open Anyway". This is only needed once.
   EOS
+
 end

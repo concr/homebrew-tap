@@ -1,4 +1,5 @@
-cask "c-notproton" do
+cask "notproton" do
+
   version "1.1.4"
   # Fill in: curl -sL https://github.com/NotProtonNot/NotProton/releases/download/v1.1.4/NotProton.zip | shasum -a 256
   sha256 "dabd725e5409b9dbc8fa8ab4e39b54d28ea6a2fabf647ae9801e2a52dc2f64f4"
