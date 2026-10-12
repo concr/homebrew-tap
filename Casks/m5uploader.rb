@@ -15,25 +15,11 @@ cask "m5uploader" do
     strategy :github_latest
   end
 
-  # m4uploader runs from 11.0 xxx but 13.0 ventura is the lowest we can use
+  # m4uploader runs from 11.0 big sur but 13.0 ventura is the lowest we can use
   depends_on macos: :ventura
   app "m5uploader-macos.app", target: "m5uploader.app"
 
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"
-
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/M5uploader.app"
-  bundle_id = "m5uploader-macos"
-
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
- # zap trash: [
- #   "~/Library/Application Support/#{bundle_id}",
- #   "~/Library/Caches/#{bundle_id}",
- #   "~/Library/HTTPStorages/#{bundle_id}",
- #   "~/Library/Preferences/#{bundle_id}.plist",
- #   "~/Library/Saved Application State/#{bundle_id}.savedState",
- # ]
 
   caveats <<~EOS
     #{token} is not notarized by Apple. On first launch macOS will block it:
