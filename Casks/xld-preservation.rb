@@ -16,7 +16,7 @@ cask "xld-preservation" do
 
   auto_updates true
 
-  # ultimate lemmings runs from 10.4 lion but 13.0 ventura is the lowest we can use
+  # xld runs from 10.4 lion but 13.0 ventura is the lowest we can use
   depends_on macos: :ventura
 
   conflicts_with cask: "xld"
