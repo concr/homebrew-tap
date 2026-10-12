@@ -20,7 +20,7 @@ cask "xact-preservation" do
   depends_on macos: :ventura
 
   conflicts_with cask: "xact"
-  app "xACT.app"
+  app "xACT#{version}/xACT.app"
 
   # Fill in the bundle ID once installed:
   #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/xACT.app"
