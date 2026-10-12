@@ -30,6 +30,7 @@ sh update-cask-sha.sh Casks/[CASK].rb
 * notproton
 * ultimate-lemmings
 * ultimate-lemmings@slim
+* xact-preservation
 * xld-preservation
 
 ```bash
