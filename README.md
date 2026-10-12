@@ -24,6 +24,7 @@ sh update-cask-sha.sh Casks/[CASK].rb
 * crystalrcm
 * dmde
 * dmde@beta
+* fs-uae@alpha
 * m5uploader
 * makemkv-preservation
 * newshosting
