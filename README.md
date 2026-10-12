@@ -1,11 +1,20 @@
 # homebrew-tap
 
+## General commands
+
 ```bash
 # list tap
 brew tap-info concr/tap
+```
 
+## Update version
+
+```bash
 # check upstream for new versions
 brew livecheck --tap concr/tap
+
+# if there is a new version, change it in the .rb file and run:
+sh update-cask-sha.sh Casks/[CASK].rb
 ```
 
 ## Casks
