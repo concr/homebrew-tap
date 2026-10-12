@@ -2,12 +2,12 @@ cask "fs-uae@alpha" do
 
   arch arm: "arm64", intel: "x86_64"
   
-  version "5.0.6"
+  version "5.0.7"
   
-  # Fill in: curl -sL https://fs-uae.net/alpha/5.0.6/FS-UAE-5.0.6-arm64-apple-darwin.dmg | shasum -a 256
-  #          curl -sL https://fs-uae.net/alpha/5.0.6/FS-UAE-5.0.6-x86_64-apple-darwin.dmg | shasum -a 256
-  sha256 arm:   "1d03fe37c0888ec8f67dfca51ed5b021449aebb73ea4eaf72114ee2a827ff71a",
-         intel: "ce8e2381846163472dfa28d2321a6f6fcd4e901f817d4233443b15ab6ab75e1b"
+  # Fill in: curl -sL https://fs-uae.net/alpha/5.0.7/FS-UAE-5.0.7-arm64-apple-darwin.dmg | shasum -a 256
+  #          curl -sL https://fs-uae.net/alpha/5.0.7/FS-UAE-5.0.7-x86_64-apple-darwin.dmg | shasum -a 256
+  sha256 arm:   "6a98d9a17c3a3e0e8b1b63cce7c2a809ac77cd8b98f9758c9797bcd9ec62082d",
+         intel: "23be86a459923b156ebd4f2954c8c544216d0d8a1cdd7d58ad5c58579340df6d"
 
   url "https://fs-uae.net/alpha/#{version}/FS-UAE-#{version}-#{arch}-apple-darwin.dmg"
   name "FS-UAE"
