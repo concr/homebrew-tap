@@ -1,9 +1,9 @@
 cask "notproton" do
 
-  version "1.1.7"
+  version "1.2.0"
 
   # Fill in: curl -sL https://github.com/NotProtonNot/NotProton/releases/download/v1.1.7/NotProton.zip | shasum -a 256
-  sha256 "df116f5185fb57b6f6f8ff5f593b9851edb697a01777e403e1fd23185f9bdbff"
+  sha256 "c077473daae9a049a51dd039a2908c7c061f630d58628a74ac4e8a9f6e5b2e09"
 
   url "https://github.com/NotProtonNot/NotProton/releases/download/v#{version}/NotProton.zip"
   name "NotProton"
