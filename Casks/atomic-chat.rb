@@ -1,8 +1,6 @@
 cask "atomic-chat" do
 
   version "2.2.14"
-
-  # Fill in: curl -sL https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v2.2.3/Atomic.Chat_2.2.3_universal.dmg | shasum -a 256
   sha256 "5f4dac9aaf8e5afc922a92b7967ba63208d45108ca06e8011fe054041ad0d77d"
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"

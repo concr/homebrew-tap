@@ -1,8 +1,6 @@
 cask "m5uploader" do
 
   version "1.1.2"
-
-  # Fill in: curl -sL https://github.com/cryptspeak/m5uploader/releases/download/v1.1.2/m5uploader-macos.zip | shasum -a 256
   sha256 "69d9e8c1689f0c450a3f800efd0024b7ca044f64dd5acafa347c81a4d3a6b1ba"
 
   url "https://github.com/cryptspeak/m5uploader/releases/download/v#{version}/m5uploader-macos.zip"

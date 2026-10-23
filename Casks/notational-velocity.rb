@@ -1,8 +1,6 @@
 cask "notational-velocity" do
 
   version "2.5.2"
-
-  # Fill in: curl -sL https://github.com/NotProtonNot/NotProton/releases/download/v1.1.7/NotProton.zip | shasum -a 256
   sha256 "f84ebcef767ad6191850902b4576d6b8136e059ccc61b22874cf372c8b8e7f8b"
 
   url "https://github.com/scrod/nv/releases/download/v#{version}/NotationalVelocity-#{version}.zip"

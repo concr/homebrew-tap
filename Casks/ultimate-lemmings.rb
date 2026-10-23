@@ -1,8 +1,6 @@
 cask "ultimate-lemmings" do
 
   version "2.1.2,build96"
-
-  # Fill in: curl -sL https://github.com/ErikVeland/Lemmings/releases/download/v1.9.3/UltimateLemmings-1.9.3-build78.zip | shasum -a 256
   sha256 "9d32711508a333fc0a44ed5a1ebde0e9e8454819954969ba73928a36cc83af94"
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version.csv.first}/UltimateLemmings-#{version.csv.first}-#{version.csv.second}.zip"

@@ -1,7 +1,6 @@
 cask "airport-konfigurator" do
 
   version "1.0"
-
   sha256 :no_check
 
   url "https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip"

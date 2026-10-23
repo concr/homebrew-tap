@@ -1,7 +1,6 @@
 cask "newshosting" do
 
   version "3.8.9"
-
   sha256 :no_check
 
   url "https://client-index.newshosting.com/nh/latest/newshosting.dmg"
