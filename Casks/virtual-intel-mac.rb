@@ -29,13 +29,15 @@ cask "virtual-intel-mac" do
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
 
-  caveats <<~EOS
-    #{token} is not notarized by Apple. On first launch macOS will block it:
-    open it once, then go to System Settings → Privacy & Security and click
-    "Open Anyway". This is only needed once.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/#{token}.app"]
+  end
 
-    Run the commmand m5uploader from terminal and then notarize it in settings.
-  EOS
+  #caveats <<~EOS
+  #  #{token} is not notarized by Apple. On first launch macOS will block it:
+  #  open it once, then go to System Settings → Privacy & Security and click
+  #  "Open Anyway". This is only needed once.
+  #EOS
 
   # caveats do
   #   unsigned_accessibility 
