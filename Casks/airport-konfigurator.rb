@@ -13,7 +13,7 @@ cask "airport-konfigurator" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  auto updates false
+  # auto_updates true
 
   depends_on macos: :tahoe
   # conflicts_with cask: "d"
