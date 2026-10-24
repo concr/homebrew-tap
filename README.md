@@ -68,7 +68,7 @@ bash update-cask-sha.sh Casks/ultimate-lemmings.rb 2.2.2,build99
 brew cat --cask concr/tap/[CASK]
 
 # strict check recipe
-brew audit --cask --new concr/tap/[CASK]
+brew audit --cask --strict --online concr/tap/[CASK]
 
 # check upstream for new version
 brew livecheck --cask concr/tap/[CASK]
