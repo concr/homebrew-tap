@@ -1,4 +1,4 @@
-cask "virtual-intel-mac"
+cask "virtual-intel-mac" do
 
   version "1.0"
   sha256 "87d4dc3f77568c545451c3484dc639ee814cd3a47590c7ccf7d0ed8f61f83325"
