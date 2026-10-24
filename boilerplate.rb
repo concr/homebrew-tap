@@ -252,17 +252,20 @@ cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
   # `uninstall_postflight do` are deprecated.
   # Paths are relative to the unpacked download unless you pass `base:`
   # (e.g. base: :home, base: :appdir, base: :staged_path).
+  # `#{appdir}` does NOT work inside these blocks. Use `base: :appdir` for
+  # paths, and placeholders like "{{appdir}}" or "{{staged_path}}" inside
+  # `run` arguments and file contents.
   # ===========================================================================
   # preflight_steps do
   #   mkdir_p "Prepared"
   # end
   #
   # postflight_steps do
-  #   set_permissions "#{appdir}/My App.app/Contents/MacOS/helper", "0755"
+  #   set_permissions "My App.app/Contents/MacOS/helper", "0755", base: :appdir
   #   symlink "Prepared/thing", "ThingLink"
   #   write_file "Library/Application Support/MyApp/settings.json", '{"telemetry":false}', base: :home
   #   inreplace "config.ini", "telemetry=1", "telemetry=0"
-  #   run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/My App.app"]
+  #   run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/My App.app"]
   #
   #   if_path_exists "legacy.cfg" do
   #     remove "legacy.cfg"
@@ -270,7 +273,7 @@ cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
   # end
   #
   # uninstall_preflight_steps do
-  #   run "#{appdir}/My App.app/Contents/MacOS/mycli", args: ["--unregister"], must_succeed: false
+  #   run "My App.app/Contents/MacOS/mycli", base: :appdir, args: ["--unregister"], must_succeed: false
   # end
   #
   # uninstall_postflight_steps do
