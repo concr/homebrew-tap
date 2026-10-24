@@ -5,7 +5,7 @@ cask "virtual-intel-mac" do
 
   url "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon/releases/download/#{version}/VirtualIntelMac.#{version}.zip"
   name "Virtual Intel Mac"
-  desc "Runs Intel versions of macOS Mojave, Catalina and Big Sur on Apple silicon"
+  desc "Runs macOS Mojave, Catalina and Big Sur on Apple Silicon"
   homepage "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon"
 
   livecheck do
@@ -18,7 +18,7 @@ cask "virtual-intel-mac" do
   depends_on macos: :sequoia
   # conflicts_with: cask: ""
 
-  app "Virtual Intel Mac.app"
+  app "Virtual Intel Mac/Virtual Intel Mac.app"
   bundle_id = "com.mac.virtualintelmac"
 
   zap trash: [
