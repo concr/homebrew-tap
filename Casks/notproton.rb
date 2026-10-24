@@ -13,15 +13,14 @@ cask "notproton" do
     strategy :github_latest
   end
 
-  depends_on macos: :tahoe
-  app "NotProton.app"
+  # auto_updates true
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
+  depends_on macos: :tahoe
+  # conflicts_with cask: ""
+
+  app "NotProton.app"
   bundle_id = "com.notproton.NotProton"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.notproton.NotProton*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

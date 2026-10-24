@@ -19,14 +19,11 @@ cask "katalog" do
   auto_updates true
 
   depends_on macos: :sonoma
-  app "Katalog.app"
+  # conflicts_with cask: ""
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Katalog.app"
+  app "Katalog.app"
   bundle_id = "com.musickatalog.katalog"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.musickatalog.katalog*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

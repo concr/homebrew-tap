@@ -13,22 +13,19 @@ cask "makemkv-preservation" do
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
-  # makemkv runs from 10.7 lion but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
+  # auto_updates true
+
+  depends_on macos: :ventura  # makemkv runs from 10.7 lion but 13.0 ventura is the lowest we can use
   conflicts_with cask: "makemkv"
+
   app "MakeMKV.app"
+  bundle_id = "com.makemkv.MakeMKV"
 
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmccextr"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmgplsrv"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/sdftool"
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
-  bundle_id = "com.makemkv.MakeMKV"
-
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.makemkv.MakeMKV*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

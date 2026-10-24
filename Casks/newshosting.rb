@@ -13,16 +13,14 @@ cask "newshosting" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  # dmde runs from 10.13 mojave but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-  app "Newshosting.app"
+  # auto_updates true
+  
+  depends_on macos: :ventura  # newshosting runs from 10.13 mojave but 13.0 ventura is the lowest we can use
+  # conflicts_with cask: ""
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Newshosting.app"
+  app "Newshosting.app"
   bundle_id = "com.newshosting.client"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.newshosting.client*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

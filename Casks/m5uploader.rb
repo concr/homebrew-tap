@@ -13,8 +13,11 @@ cask "m5uploader" do
     strategy :github_latest
   end
 
-  # m4uploader runs from 11.0 big sur but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
+  # auto_updates true
+
+  depends_on macos: :ventura  # m4uploader runs from 11.0 big sur but 13.0 ventura is the lowest we can use
+  # conflicts_with cask: ""
+
   app "m5uploader-macos.app", target: "m5uploader.app"
 
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"

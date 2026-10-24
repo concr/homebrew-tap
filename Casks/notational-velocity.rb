@@ -13,16 +13,13 @@ cask "notational-velocity" do
     strategy :github_latest
   end
 
-  # dmde runs from 11.5 big sur but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
+  # auto_updates true
+  
+  depends_on macos: :ventura  # notational-velocity runs from 11.5 big sur but 13.0 ventura is the lowest we can use
   app "Notational Velocity.app"
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
   bundle_id = "net.notational.velocity"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*net.notational.velocity*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

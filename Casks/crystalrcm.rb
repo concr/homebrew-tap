@@ -13,16 +13,14 @@ cask "crystalrcm" do
     strategy :github_latest
   end
 
-  # crystalrcm from 12.1 monterey but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-  app "CrystalRCM.app"
+  # auto_updates true
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/NotProton.app"
+  depends_on macos: :ventura  # crystalrcm runs from 12.1 monterey but 13.0 ventura is the lowest we can use
+  # conflicts_with cask: ""
+
+  app "CrystalRCM.app"
   bundle_id = "cafe.moya.CrystalRCM"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*cafe.moya.CrystalRCM*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

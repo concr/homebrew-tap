@@ -1,7 +1,7 @@
 cask "ultimate-lemmings@slim" do
 
-  version "2.1.2,build96"
-  sha256 "888a45383d6b59d7266d8b38fe1a493102c306602277e74c804f10dfcd1bcd36"
+  version "2.2.2,build99"
+  sha256 "0e6da11aa16ffad2ba4daf42936e9e15a0bf25e06f8fc745381294915288d711"
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version.csv.first}/UltimateLemmings-#{version.csv.first}-#{version.csv.second}-slim.zip"
   name "Ultimate Lemmings (slim)"
@@ -21,22 +21,18 @@ cask "ultimate-lemmings@slim" do
     end
   end
 
-  # ultimate lemmings runs from 12.3 monterey but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
+  # auto_updates true
+  
+  depends_on macos: :ventura  # ultimate lemmings runs from 12.3 monterey but 13.0 ventura is the lowest we can use
   conflicts_with cask: "ultimate-lemmings"
 
   app "Ultimate Lemmings.app"
+  bundle_id = "academy.glasscode.lemmings"
 
   postflight_steps do
     remove "__MACOSX", recursive: true
   end
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Ultimate Lemmings.app"
-  bundle_id = "academy.glasscode.lemmings"
-
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*academy.glasscode.lemmings*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
@@ -44,6 +40,5 @@ cask "ultimate-lemmings@slim" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 
 end

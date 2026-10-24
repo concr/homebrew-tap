@@ -15,23 +15,17 @@ cask "xld-preservation" do
   end
 
   auto_updates true
-
-  # xld runs from 10.4 lion but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-
+  
+  depends_on macos: :ventura  # xld runs from 10.4 lion but 13.0 ventura is the lowest we can use
   conflicts_with cask: "xld"
+
   app "XLD.app"
+  bundle_id = "jp.tmkk.XLD"
 
   command_wrapper "xld",
     executable: "#{appdir}/XLD.app/Contents/MacOS/XLD",
     args: "--cmdline"
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/XLD.app"
-  bundle_id = "jp.tmkk.XLD"
-
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*jp.tmkk.XLD*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

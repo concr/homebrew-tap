@@ -19,16 +19,14 @@ cask "fs-uae@alpha" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  # dmde runs from 10.13 mojave but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-  app "FS-UAE.app"
+  # auto_updates true
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/FS-UAE.app"
+  depends_on macos: :ventura  # fs-uae@alpha runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
+  conflicts_with cask: "fs-uae-emulator"
+
+  app "FS-UAE.app"
   bundle_id = "net.fs-uae.FS-UAE"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*net.fs-uae.FS-UAE*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

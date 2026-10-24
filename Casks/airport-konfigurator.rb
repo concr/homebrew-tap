@@ -13,15 +13,14 @@ cask "airport-konfigurator" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :tahoe
-  app "AirPortKonfigurator.app"
+  auto updates false
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/AirPort Konfigurator.app"
+  depends_on macos: :tahoe
+  # conflicts_with cask: "d"
+
+  app "AirPortKonfigurator.app"
   bundle_id = "de.iwerkstatt.airportkonfigurator"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*de.iwerkstatt.airportkonfigurator*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

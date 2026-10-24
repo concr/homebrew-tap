@@ -1,7 +1,7 @@
 cask "atomic-chat" do
 
-  version "2.2.14"
-  sha256 "5f4dac9aaf8e5afc922a92b7967ba63208d45108ca06e8011fe054041ad0d77d"
+  version "2.2.26"
+  sha256 "06d04fce08a7b9f8301e680a4ac7524519579341fe3ba3873ba20e2fe1b86b4b"
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
@@ -13,16 +13,14 @@ cask "atomic-chat" do
     strategy :github_latest
   end
   
-  # atomic chat runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-  app "Atomic Chat.app"
+  # auto_updates true
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/Atomic Chat.app"
+  depends_on macos: :ventura
+  # conflicts_with cask: ""
+
+  app "Atomic Chat.app"
   bundle_id = "chat.atomic.app"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*chat.atomic.app*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",

@@ -16,17 +16,14 @@ cask "dmde" do
     end
   end
 
-  # dmde runs from 10.14 mojave but 13.0 ventura is the lowest we can use
-  depends_on macos: :ventura
-  app "dmde.app", target: "DMDE.app"
+  # auto_updates true
+  
+  depends_on macos: :ventura  # dmde runs from 10.14 mojave but 13.0 ventura is the lowest we can use
   conflicts_with cask: "dmde@beta"
 
-  # Fill in the bundle ID once installed:
-  #   mdls -name kMDItemCFBundleIdentifier -r "/Applications/dmde.app"
+  app "dmde.app", target: "DMDE.app"
   bundle_id = "com.dmde.DMDE"
 
-  # Find all folder / files:
-  #   sudo find ~/Library /Library /private/var/folders -iname "*com.dmde.DMDE*" 2>/dev/null
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
