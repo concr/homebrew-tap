@@ -5,7 +5,7 @@ cask "virtual-intel-mac" do
 
   url "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon/releases/download/#{version}/VirtualIntelMac.#{version}.zip"
   name "Virtual Intel Mac"
-  desc "Runs macOS Mojave, Catalina and Big Sur on Apple Silicon"
+  desc "Runs macOS Mojave 10.14, Catalina 10.15 and Big Sur 11 on Apple Silicon"
   homepage "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon"
 
   livecheck do
