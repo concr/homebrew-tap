@@ -12,7 +12,6 @@ cask "nx2apple" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "nx2apple@rc"
   # auto_updates true
 
   depends_on arch: [:arm64]
