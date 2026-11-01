@@ -15,7 +15,7 @@ cask "airport-konfigurator" do
 
   # auto_updates true
 
-  # depends_on arch: :arm64
+  depends_on arch: [ :arm64, :intel ]
   depends_on macos: :tahoe
   # conflicts_with cask: "d"
 
@@ -34,8 +34,8 @@ cask "airport-konfigurator" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/AirPortKonfigurator.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+    run "/usr/bin/xattr", args: [ "-dr", "com.apple.quarantine", "{{appdir}}/AirPortKonfigurator.app" ]
+    run "/bin/echo", args: [ "🦠 Removed quarantine from {{token}}." ], print_stdout: true
   end
 
   # caveats <<~EOS
