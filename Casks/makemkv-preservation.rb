@@ -15,7 +15,7 @@ cask "makemkv-preservation" do
 
   # auto_updates true
 
-  depends_on macos: :ventura  # makemkv runs from 10.7 lion but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura  # runs from 10.7 lion but 13.0 ventura is the lowest we can use
   conflicts_with cask: "makemkv"
 
   app "MakeMKV.app"

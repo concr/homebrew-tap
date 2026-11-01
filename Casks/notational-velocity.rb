@@ -15,7 +15,7 @@ cask "notational-velocity" do
 
   # auto_updates true
   
-  depends_on macos: :ventura  # notational-velocity runs from 11.5 big sur but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura  # runs from 11.5 big sur but 13.0 ventura is the lowest we can use
   # conflicts_with cask: ""
   
   app "Notational Velocity.app"
