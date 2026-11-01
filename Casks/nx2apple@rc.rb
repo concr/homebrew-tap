@@ -15,6 +15,7 @@ cask "nx2apple@rc" do
 
   # auto_updates true
 
+  depends_on arch: :arm64
   depends_on macos: :ventura
   conflicts_with cask: "nx2apple"
 
@@ -30,17 +31,21 @@ cask "nx2apple@rc" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/NS Port Builder.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 
-  #caveats <<~EOS
-  #  #{token} is not notarized by Apple. On first launch macOS will block it:
-  #  open it once, then go to System Settings → Privacy & Security and click
-  #  "Open Anyway". This is only needed once.
-  #EOS
+  # caveats <<~EOS
+  #   #{token} is not notarized by Apple. On first launch macOS will block it:
+  #   open it once, then go to System Settings → Privacy & Security and click
+  #   "Open Anyway". This is only needed once.
+  #
+  #   Run the commmand m5uploader from terminal and then notarize it in settings.
+  # EOS
 
   # caveats do
   #   unsigned_accessibility 
   # end
+
 
 end

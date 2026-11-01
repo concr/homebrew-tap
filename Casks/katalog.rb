@@ -32,4 +32,5 @@ cask "katalog" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
+
 end

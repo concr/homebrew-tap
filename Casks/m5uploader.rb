@@ -24,17 +24,17 @@ cask "m5uploader" do
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"], print_stdout: true
-    run "/bin/echo", args: ["Removed quarantine from {{token}}"], print_stdout: true
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 
-  #caveats <<~EOS
-  #  #{token} is not notarized by Apple. On first launch macOS will block it:
-  #  open it once, then go to System Settings → Privacy & Security and click
-  #  "Open Anyway". This is only needed once.
+  # caveats <<~EOS
+  #   #{token} is not notarized by Apple. On first launch macOS will block it:
+  #   open it once, then go to System Settings → Privacy & Security and click
+  #   "Open Anyway". This is only needed once.
   #
-  #  Run the commmand m5uploader from terminal and then notarize it in settings.
-  #EOS
+  #   Run the commmand m5uploader from terminal and then notarize it in settings.
+  # EOS
 
   # caveats do
   #   unsigned_accessibility 
