@@ -15,7 +15,7 @@ cask "virtual-intel-mac" do
 
   # auto_updates true
 
-  # depends_on arch: :arm64
+  depends_on arch: :arm64
   depends_on macos: :sequoia
   # conflicts_with: cask: ""
 
@@ -31,7 +31,7 @@ cask "virtual-intel-mac" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Virtual Intel Mac.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 

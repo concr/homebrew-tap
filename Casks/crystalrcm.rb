@@ -31,7 +31,7 @@ cask "crystalrcm" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/CrystalRCM.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 
