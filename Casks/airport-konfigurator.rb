@@ -15,6 +15,7 @@ cask "airport-konfigurator" do
 
   # auto_updates true
 
+  # depends_on arch: :arm64
   depends_on macos: :tahoe
   # conflicts_with cask: "d"
 

@@ -15,6 +15,7 @@ cask "m5uploader" do
 
   # auto_updates true
 
+  depends_on arch: :arm64
   depends_on macos: :ventura  # runs from 11.0 big sur but 13.0 ventura is the lowest we can use
   # conflicts_with cask: ""
 
@@ -22,13 +23,18 @@ cask "m5uploader" do
 
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"
 
-  caveats <<~EOS
-    #{token} is not notarized by Apple. On first launch macOS will block it:
-    open it once, then go to System Settings → Privacy & Security and click
-    "Open Anyway". This is only needed once.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    echo "Removed quarantine from #{token}"
+  end
 
-    Run the commmand m5uploader from terminal and then notarize it in settings.
-  EOS
+  #caveats <<~EOS
+  #  #{token} is not notarized by Apple. On first launch macOS will block it:
+  #  open it once, then go to System Settings → Privacy & Security and click
+  #  "Open Anyway". This is only needed once.
+  #
+  #  Run the commmand m5uploader from terminal and then notarize it in settings.
+  #EOS
 
   # caveats do
   #   unsigned_accessibility 
