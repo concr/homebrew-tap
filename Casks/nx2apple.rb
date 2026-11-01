@@ -1,11 +1,10 @@
 cask "nx2apple" do
-
-  version "0.7.5"
-  sha256 "9ff78481996665b2d375adcf41a4445c64dae71a8f535f803d91fa24b31d5d51"
+  version "1.0.0"
+  sha256 "ec5f82bb5a13245c1b1502022ed51ab5c4f83bd646f098390d7d9161ded69fe9"
 
   url "https://github.com/LNPANDY/NX2Apple/releases/download/v#{version}/NS-Port-Builder-macOS-arm64.zip"
   name "NX2Apple"
-  desc "Play your own Switch games on iPhone/iPad — one-click app, no terminal."
+  desc "Play your own Switch games on iPhone/iPad — one-click app, no terminal"
   homepage "https://github.com/LNPANDY/NX2Apple"
 
   livecheck do
@@ -13,14 +12,20 @@ cask "nx2apple" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "nx2apple@rc"
   # auto_updates true
 
-  depends_on arch: [ :arm64 ]
+  depends_on arch: [:arm64]
   depends_on macos: :ventura
-  conflicts_with cask: "nx2apple@rc"
 
   app "NS Port Builder.app"
+
   bundle_id = "org.nxnative.NSPortBuilder"
+
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/NS Port Builder.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+  end
 
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
@@ -29,11 +34,6 @@ cask "nx2apple" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/NS Port Builder.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
-  end
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -44,8 +44,6 @@ cask "nx2apple" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end
