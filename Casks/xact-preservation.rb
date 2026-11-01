@@ -16,7 +16,7 @@ cask "xact-preservation" do
 
   auto_updates true
   
-  # depends_on arch: :arm64
+  depends_on arch: [ :arm64, :intel ]
   depends_on macos: :ventura  # xact from 10.13 mojave but 13.0 ventura is the lowest we can use
   conflicts_with cask: "xact"
 

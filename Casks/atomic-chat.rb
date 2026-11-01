@@ -15,7 +15,7 @@ cask "atomic-chat" do
   
   # auto_updates true
 
-  # depends_on arch: :arm64
+  depends_on arch: [ :arm64, :intel ]
   depends_on macos: :ventura
   # conflicts_with cask: ""
 

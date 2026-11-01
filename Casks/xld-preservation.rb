@@ -16,7 +16,7 @@ cask "xld-preservation" do
 
   auto_updates true
   
-  # depends_on arch: :arm64
+  depends_on arch: [ :arm64, :intel ]
   depends_on macos: :ventura  # runs from 10.4 lion but 13.0 ventura is the lowest we can use
   conflicts_with cask: "xld"
 

@@ -17,7 +17,7 @@ cask "airport-konfigurator" do
 
   depends_on arch: [ :arm64, :intel ]
   depends_on macos: :tahoe
-  # conflicts_with cask: "d"
+  # conflicts_with cask: ""
 
   app "AirPortKonfigurator.app"
   bundle_id = "de.iwerkstatt.airportkonfigurator"
