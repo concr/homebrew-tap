@@ -5,7 +5,7 @@ cask "nx2apple" do
 
   url "https://github.com/LNPANDY/NX2Apple/releases/download/v#{version}/NS-Port-Builder-macOS-arm64.zip"
   name "NX2Apple"
-  desc "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal."
+  desc "Play your own Switch games on iPhone/iPad — one-click app, no terminal."
   homepage "https://github.com/LNPANDY/NX2Apple"
 
   livecheck do
