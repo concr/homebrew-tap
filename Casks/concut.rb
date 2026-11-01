@@ -5,8 +5,8 @@ cask "concut" do
 
   # curl -sL https://github.com/jub0t/Concat/releases/download/v0.2.8/Concat-0.2.8-macos-arm64.dmg | sha256sum
   # curl -sL https://github.com/jub0t/Concat/releases/download/v0.2.8/Concat-0.2.8-macos-x86_64.dmg | sha256sum
-  sha256 arm:  "4fe1820f36235efe8a28379a224239032c260bef1ad0fb950274c2f832e91805"
-  sha25 intel: "c040bd5c14b6de6443dd9c4e00070e57beafcf7cd6347dfc19b8559843bc16e6"
+  sha256 arm:   "4fe1820f36235efe8a28379a224239032c260bef1ad0fb950274c2f832e91805"
+  sha256 intel: "c040bd5c14b6de6443dd9c4e00070e57beafcf7cd6347dfc19b8559843bc16e6"
 
   url "https://github.com/jub0t/Concat/releases/download/v#{version}/Concat-#{version}-macos-#{arch}.dmg"
   name "Concat"
