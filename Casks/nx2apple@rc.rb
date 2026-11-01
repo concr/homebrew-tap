@@ -1,4 +1,4 @@
-cask "nx2apple" do
+cask "nx2apple@rc" do
 
   version "0.8.0,7"
   sha256 "4cbb5eb69ba2934554f217a2796f8382eb0fb81636bdd7319a834f788bc50595"
