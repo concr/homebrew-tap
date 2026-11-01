@@ -1,7 +1,7 @@
 cask "katalog" do
 
-  version "0.10.2,726"
-  sha256 "5dfd47b0e7d8b391fe84697335b204f9279d68b71e58542f87d2d181098736a4"
+  version "0.10.7,736"
+  sha256 "da81c87241e65fba107bc6ad88aa4408d661d75714fc78593d34e1f8ae0be57e"
 
   url "https://musickatalog.com/download/Katalog-#{version.csv.second}.dmg"
   name "Katalog"

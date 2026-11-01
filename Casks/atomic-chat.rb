@@ -1,7 +1,7 @@
 cask "atomic-chat" do
 
-  version "2.2.26"
-  sha256 "06d04fce08a7b9f8301e680a4ac7524519579341fe3ba3873ba20e2fe1b86b4b"
+  version "2.2.29"
+  sha256 "48e17fb483877a1f9ce493a25b8826191a3b9c7bbe513590ece39cd50365ef6f"
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
