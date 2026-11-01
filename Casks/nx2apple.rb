@@ -31,7 +31,7 @@ cask "nx2apple" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 

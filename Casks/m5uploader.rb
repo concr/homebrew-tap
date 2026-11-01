@@ -24,7 +24,7 @@ cask "m5uploader" do
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 

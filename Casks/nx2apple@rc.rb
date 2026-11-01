@@ -10,7 +10,16 @@ cask "nx2apple@rc" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)-rc(\d+)$/i)
+    # github_latest skips prereleases; a block makes github_releases keep them
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        "#{match[1]},#{match[2]}" if match
+      end
+    end
   end
 
   # auto_updates true
@@ -31,7 +40,7 @@ cask "nx2apple@rc" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/m5uploader.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 

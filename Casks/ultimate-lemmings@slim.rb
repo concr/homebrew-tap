@@ -30,10 +30,6 @@ cask "ultimate-lemmings@slim" do
   app "Ultimate Lemmings.app"
   bundle_id = "academy.glasscode.lemmings"
 
-  postflight_steps do
-    remove "__MACOSX", recursive: true
-  end
-
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
@@ -41,5 +37,9 @@ cask "ultimate-lemmings@slim" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
+
+  postflight_steps do
+    remove "__MACOSX", recursive: true
+  end
 
 end
