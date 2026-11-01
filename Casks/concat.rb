@@ -1,4 +1,4 @@
-cask "concut" do
+cask "concat" do
 
   arch arm: "arm64", intel: "x86_64"
   version "0.2.8"
@@ -24,8 +24,8 @@ cask "concut" do
   depends_on macos: :ventura  # runs from 12.0 monterey but 13.0 ventura is the lowest we can use
   # conflicts_with cask: ""
 
-  app "Concut.app"
-  bundle_id = "com.concut.editor"
+  app "Concat.app"
+  bundle_id = "com.concat.editor"
 
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
@@ -36,7 +36,7 @@ cask "concut" do
   ]
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/{{token}}.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Concat.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
 
