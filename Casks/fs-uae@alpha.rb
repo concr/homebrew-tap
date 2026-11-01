@@ -21,7 +21,7 @@ cask "fs-uae@alpha" do
   # auto_updates true
 
   depends_on arch: [ :arm64 ]
-  depends_on macos: :ventura  # fs-uae@alpha runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
+  depends_on macos: :ventura  # runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
   conflicts_with cask: "fs-uae-emulator"
 
   app "FS-UAE.app"
