@@ -57,6 +57,7 @@ bash update-cask-sha.sh Casks/ultimate-lemmings.rb 2.2.2,build99
 * newshosting
 * notational-velocity
 * notproton
+* nx2apple
 * ultimate-lemmings
 * ultimate-lemmings@slim
 * virtual-intel-mac
@@ -72,6 +73,9 @@ brew audit --cask --strict --online concr/tap/[CASK]
 
 # check upstream for new version
 brew livecheck --cask concr/tap/[CASK]
+
+# update to new version
+brew bump-cask-pr --version x.x.x [CASK]
 ```
 
 ## Formula

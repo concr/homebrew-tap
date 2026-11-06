@@ -1,7 +1,7 @@
 cask "virtual-intel-mac" do
 
-  version "1.0"
-  sha256 "87d4dc3f77568c545451c3484dc639ee814cd3a47590c7ccf7d0ed8f61f83325"
+  version "2.0"
+  sha256 "3c733ce8cd84b854a0ad5add7f5adfacecf2a0c795b0978da3c4138add2279c3"
 
   url "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon/releases/download/#{version}/VirtualIntelMac.#{version}.zip"
   name "Virtual Intel Mac"

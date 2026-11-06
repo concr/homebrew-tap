@@ -1,6 +1,6 @@
 cask "nx2apple" do
-  version "1.0.0"
-  sha256 "ec5f82bb5a13245c1b1502022ed51ab5c4f83bd646f098390d7d9161ded69fe9"
+  version "1.2.3"
+  sha256 "e91a38b6f72b542f407a9b7ac98faa818a3573eb3d245058aef52c5831ea0162"
 
   url "https://github.com/LNPANDY/NX2Apple/releases/download/v#{version}/NS-Port-Builder-macOS-arm64.zip"
   name "NX2Apple"
