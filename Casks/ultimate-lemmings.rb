@@ -1,7 +1,7 @@
 cask "ultimate-lemmings" do
 
-  version "2.4,build104"
-  sha256 "0626bf42266651858dd18d6d96d55480f51b276c0b66814872002cc4b734675b"
+  version "2.4.2,build106"
+  sha256 "72bf292f33c98cb8b198d2c0fe52cd6ff3fb63a013aa4214b820e4bac868b1ec"
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version.csv.first}/UltimateLemmings-#{version.csv.first}-#{version.csv.second}.zip"
   name "Ultimate Lemmings"
