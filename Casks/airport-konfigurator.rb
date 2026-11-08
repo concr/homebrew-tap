@@ -9,7 +9,7 @@ cask "airport-konfigurator" do
   homepage "https://www.iwerkstatt-repair.de/software/airport-konfigurator/"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
