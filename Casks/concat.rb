@@ -1,12 +1,14 @@
 cask "concat" do
 
-  arch arm: "arm64", intel: "x86_64"
+  arch arm:   "arm64",
+       intel: "x86_64"
+  
   version "0.2.9"
 
   # curl -sL https://github.com/jub0t/Concat/releases/download/v0.2.9/Concat-0.2.9-macos-arm64.dmg | sha256sum
   # curl -sL https://github.com/jub0t/Concat/releases/download/v0.2.9/Concat-0.2.9-macos-x86_64.dmg | sha256sum
-  sha256 arm:   "7fdeb727155043dfb35018ff49819230426f0ea65375ea4062c41ec59682ed0e"
-  sha256 intel: "5378994af52d4319a4098bfd6cfad90033133e38c6ca33f9cd83f0ca9f2df0ea"
+  sha256 arm:   "7fdeb727155043dfb35018ff49819230426f0ea65375ea4062c41ec59682ed0e",
+         intel: "5378994af52d4319a4098bfd6cfad90033133e38c6ca33f9cd83f0ca9f2df0ea"
 
   url "https://github.com/jub0t/Concat/releases/download/v#{version}/Concat-#{version}-macos-#{arch}.dmg"
   name "Concat"
