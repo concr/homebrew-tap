@@ -19,7 +19,7 @@ cask "klimacontrol" do
   depends_on macos: :ventura
   # conflicts_with cask: ""
 
-  app Klimacontrol.app"
+  app "Klimacontrol.app"
   bundle_id = "chat.atomic.app"
 
   zap trash: [
