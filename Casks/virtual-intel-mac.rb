@@ -1,11 +1,10 @@
 cask "virtual-intel-mac" do
-
-  version "2.0"
-  sha256 "3c733ce8cd84b854a0ad5add7f5adfacecf2a0c795b0978da3c4138add2279c3"
+  version "2.1"
+  sha256 "7040de9f71e0cf020389f900dbacee25c9324f82bc608520f2803b856acdd125"
 
   url "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon/releases/download/#{version}/VirtualIntelMac.#{version}.zip"
   name "Virtual Intel Mac"
-  desc "Runs Mojave 10.14, Catalina 10.15 and Big Sur 11 on Apple Silicon."
+  desc "Runs Mojave 10.14, Catalina 10.15 and Big Sur 11 on Apple Silicon"
   homepage "https://github.com/nfzerox/VirtualIntelMacOnAppleSilicon"
 
   livecheck do
@@ -15,12 +14,19 @@ cask "virtual-intel-mac" do
 
   # auto_updates true
 
-  depends_on arch: [ :arm64, :intel ]
+  depends_on arch: [:arm64, :intel]
   depends_on macos: :sequoia
+
   # conflicts_with: cask: ""
 
   app "Virtual Intel Mac/Virtual Intel Mac.app"
+
   bundle_id = "com.mac.virtualintelmac"
+
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Virtual Intel Mac.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+  end
 
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
@@ -29,11 +35,6 @@ cask "virtual-intel-mac" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Virtual Intel Mac.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
-  end
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -44,8 +45,6 @@ cask "virtual-intel-mac" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end
