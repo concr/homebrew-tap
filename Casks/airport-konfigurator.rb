@@ -5,7 +5,7 @@ cask "airport-konfigurator" do
 
   url "https://www.iwerkstatt-repair.de/wp-content/uploads/2026/07/AirPortKonfigurator.zip"
   name "AirPort Konfigurator"
-  desc "Configure and manage AirPort base stations without AirPort Utility."
+  desc "Configure and manage AirPort base stations without AirPort Utility"
   homepage "https://www.iwerkstatt-repair.de/software/airport-konfigurator/"
 
   livecheck do
@@ -15,7 +15,7 @@ cask "airport-konfigurator" do
 
   # auto_updates true
 
-  depends_on arch: [ :arm64, :intel ]
+  depends_on arch: [:arm64, :intel]
   depends_on macos: :tahoe
   # conflicts_with cask: ""
 
