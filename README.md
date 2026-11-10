@@ -47,13 +47,16 @@ bash update-cask-sha.sh Casks/ultimate-lemmings.rb 2.2.2,build99
 
 * airport-konfigurator
 * atomic-chat
+* concat
 * crystalrcm
 * dmde
 * dmde@beta
 * fs-uae@alpha
 * katalog
+* klimacontrol
 * m5uploader
 * makemkv-preservation
+* mapc@beta
 * newshosting
 * notational-velocity
 * notproton
