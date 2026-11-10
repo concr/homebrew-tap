@@ -1,12 +1,11 @@
 cask "mapc@beta" do
-
   version "1.1.27"
-  sha256 "54c6ba29cb976bbd156970c2e710586883072e737f7c54615cb5c8b455ef6cc7"
+  sha256 "e34b9b8ab4b7a80beeb523042db346be34391731df4e06d118fe9323f06949b7"
 
   url "https://github.com/abduzeedo/mapc-site/releases/download/v#{version}/MaPC.dmg"
   name "MaPC"
-  desc "Connect Steam, Epic, GOG, Amazon and EA. No Wine, nothing to tinker with."
-  homepage "https://mapc.games"
+  desc "Connect Steam, Epic, GOG, Amazon and EA. No Wine, nothing to tinker with"
+  homepage "https://mapc.games/"
 
   livecheck do
     url :url
@@ -15,11 +14,13 @@ cask "mapc@beta" do
 
   # auto_updates true
 
-  depends_on arch: [ :arm64, :intel ]
+  depends_on arch: [:arm64, :intel]
   depends_on macos: :sequoia
+
   # conflicts_with cask: ""
 
   app "MaPC.app"
+
   bundle_id = "cafe.moya.CrystalRCM"
 
   zap trash: [
@@ -30,10 +31,10 @@ cask "mapc@beta" do
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
 
-  #postflight_steps do
+  # postflight_steps do
   #  run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/CrystalRCM.app"]
   #  run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
-  #end
+  # end
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -44,8 +45,6 @@ cask "mapc@beta" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end
