@@ -5,7 +5,7 @@ cask "notproton" do
 
   url "https://github.com/NotProtonNot/NotProton/releases/download/v#{version}/NotProton.zip"
   name "NotProton"
-  desc "Enables the Steam Play experience from Linux Steam in the macOS Steam client."
+  desc "Enables the Steam Play experience from Linux Steam in the Steam client"
   homepage "https://github.com/NotProtonNot/NotProton"
 
   livecheck do

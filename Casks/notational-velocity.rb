@@ -5,7 +5,7 @@ cask "notational-velocity" do
 
   url "https://github.com/scrod/nv/releases/download/v#{version}/NotationalVelocity-#{version}.zip"
   name "Notational Velocity"
-  desc "Modeless, mouseless macOS note-taking application."
+  desc "Modeless, mouseless note-taking application"
   homepage "https://github.com/scrod/nv"
 
   livecheck do

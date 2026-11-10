@@ -5,7 +5,7 @@ cask "crystalrcm" do
 
   url "https://github.com/prayerie/CrystalRCM/releases/download/#{version}/CrystalRCM.#{version}.dmg"
   name "CrystalRCM"
-  desc "Enables the Steam Play experience from Linux Steam in the macOS Steam client."
+  desc "Enables the Steam Play experience from Linux Steam in the Steam client"
   homepage "https://github.com/prayerie/CrystalRCM"
 
   livecheck do

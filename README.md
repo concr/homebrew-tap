@@ -79,6 +79,12 @@ brew livecheck --cask concr/tap/[CASK]
 
 # update to new version
 brew bump-cask-pr --version x.x.x [CASK]
+
+# style fix
+brew style --fix concr/tap
+
+# optional only one cask
+brew style --fix concr/tap/[CASK]
 ```
 
 ## Formula
