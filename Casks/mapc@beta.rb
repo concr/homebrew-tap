@@ -5,7 +5,7 @@ cask "mapc@beta" do
 
   url "https://github.com/abduzeedo/mapc-site/releases/download/v#{version}/MaPC.dmg"
   name "MaPC"
-  desc "Enables the Steam Play experience from Linux Steam in the macOS Steam client."
+  desc "Your PC games, on your Mac. Connect Steam, Epic, GOG, Amazon and EA, then press Play. No Wine to set up, nothing to tinker with."
   homepage "https://mapc.games"
 
   livecheck do

@@ -5,7 +5,7 @@ cask "klimacontrol" do
 
   url "https://github.com/mlafx/Klimacontrol/releases/download/v#{version}/Klimacontrol-#{version}-mac.dmg"
   name "Klimacontrol"
-  desc "Midea-PortaSplit-Steuerung für macOS und Windows – lokal im LAN, Cloud optional."
+  desc "Midea-PortaSplit-Steuerung für macOS und Windows - lokal im LAN, Cloud optional."
   homepage "https://github.com/mlafx/Klimacontrol"
 
   livecheck do

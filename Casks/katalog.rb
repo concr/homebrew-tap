@@ -5,7 +5,7 @@ cask "katalog" do
 
   url "https://musickatalog.com/download/Katalog-#{version.csv.second}.dmg"
   name "Katalog"
-  desc "Music library catalog app"
+  desc "Music library catalog app."
   homepage "https://musickatalog.com/"
 
   livecheck do

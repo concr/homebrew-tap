@@ -10,7 +10,7 @@ cask "fs-uae@alpha" do
 
   url "https://fs-uae.net/alpha/#{version}/FS-UAE-#{version}-#{arch}-apple-darwin.dmg"
   name "FS-UAE"
-  desc "Frode Solheim's Universal Amiga Emulator"
+  desc "Frode Solheim's Universal Amiga Emulator."
   homepage "https://fs-uae.net/"
 
   livecheck do
