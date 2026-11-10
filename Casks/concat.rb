@@ -12,7 +12,7 @@ cask "concat" do
 
   url "https://github.com/jub0t/Concat/releases/download/v#{version}/Concat-#{version}-macos-#{arch}.dmg"
   name "Concat"
-  desc "The truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP."
+  desc "The truly free, open-source, local-first, cross-platform CapCut replacement"
   homepage "https://github.com/jub0t/Concat"
 
   livecheck do
