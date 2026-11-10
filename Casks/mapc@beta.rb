@@ -5,7 +5,7 @@ cask "mapc@beta" do
 
   url "https://github.com/abduzeedo/mapc-site/releases/download/v#{version}/MaPC.dmg"
   name "MaPC"
-  desc "Connect Steam, Epic, GOG, Amazon and EA, then press Play. No Wine to set up, nothing to tinker with."
+  desc "Connect Steam, Epic, GOG, Amazon and EA. No Wine, nothing to tinker with."
   homepage "https://mapc.games"
 
   livecheck do
