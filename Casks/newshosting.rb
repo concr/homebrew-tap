@@ -1,5 +1,4 @@
 cask "newshosting" do
-
   version "3.8.9"
   sha256 :no_check
 
@@ -14,12 +13,14 @@ cask "newshosting" do
   end
 
   # auto_updates true
-  
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 10.13 mojave but 13.0 ventura is the lowest we can use
+
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 10.13 mojave but 13.0 ventura is the lowest we can use
+
   # conflicts_with cask: ""
 
   app "Newshosting.app"
+
   bundle_id = "com.newshosting.client"
 
   zap trash: [
@@ -29,5 +30,4 @@ cask "newshosting" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 end

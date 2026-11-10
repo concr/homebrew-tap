@@ -1,5 +1,4 @@
 cask "makemkv-preservation" do
-
   version "2.0.0"
   sha256 "e3adad095fb9344e23870d99fd9770a187816332c5a2aa1b226c0bd4a922867a"
 
@@ -13,11 +12,11 @@ cask "makemkv-preservation" do
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
+  conflicts_with cask: "makemkv"
   # auto_updates true
 
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 10.7 lion but 13.0 ventura is the lowest we can use
-  conflicts_with cask: "makemkv"
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 10.7 lion but 13.0 ventura is the lowest we can use
 
   app "MakeMKV.app"
   bundle_id = "com.makemkv.MakeMKV"
@@ -27,21 +26,20 @@ cask "makemkv-preservation" do
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmgplsrv"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/sdftool"
 
-  zap trash: [
-    "~/Library/Application Support/#{bundle_id}",
-    "~/Library/Caches/#{bundle_id}",
-    "~/Library/HTTPStorages/#{bundle_id}",
-    "~/Library/Preferences/#{bundle_id}.plist",
-    "~/Library/Saved Application State/#{bundle_id}.savedState",
-
-    "~/Library/MakeMKV",
-    "~/Movies/.MakeMKV",
-  ]
-
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/MakeMKV.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
+
+  zap trash: [
+    "~/Library/Application Support/#{bundle_id}",
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/MakeMKV",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
+    "~/Movies/.MakeMKV",
+  ]
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -52,8 +50,6 @@ cask "makemkv-preservation" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end

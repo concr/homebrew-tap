@@ -1,11 +1,14 @@
 cask "notproton" do
-
   version "1.2.4"
   sha256 "196ea6e0a93dfe8d0cf16292bdff83f14aaeb5a6ad817b91838bb1316052d053"
 
   url "https://github.com/NotProtonNot/NotProton/releases/download/v#{version}/NotProton.zip"
   name "NotProton"
+<<<<<<< Updated upstream
   desc "Enables the Steam Play experience from Linux Steam in the Steam client"
+=======
+  desc "Enables the Steam Play experience from Linux Steam in the macOS Steam client" # rubocop:todo Cask/Desc
+>>>>>>> Stashed changes
   homepage "https://github.com/NotProtonNot/NotProton"
 
   livecheck do
@@ -14,13 +17,19 @@ cask "notproton" do
   end
 
   auto_updates true
-
-  depends_on arch: [ :arm64 ]
+  depends_on arch: [:arm64]
   depends_on macos: :tahoe
+
   # conflicts_with cask: ""
 
   app "NotProton.app"
+
   bundle_id = "com.notproton.NotProton"
+
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/NotProton.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+  end
 
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
@@ -29,11 +38,6 @@ cask "notproton" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/NotProton.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
-  end
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -44,8 +48,6 @@ cask "notproton" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end

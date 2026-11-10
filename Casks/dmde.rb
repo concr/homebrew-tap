@@ -1,12 +1,15 @@
 cask "dmde" do
-
   version "4.4.6,846"
   sha256 "ce26f4bda9e377740e6624139d5e7b24a188b5cfd125dc4888b3d63bdcf26961"
 
   url "https://dmde.com/download/dmde-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}-mac64-gui.dmg"
   name "DMDE"
   desc "Powerful Data Recovery Software"
+<<<<<<< Updated upstream
   homepage "https://dmde.com"
+=======
+  homepage "https://dmde.com/"
+>>>>>>> Stashed changes
 
   livecheck do
     url "https://dmde.com/download.html"
@@ -16,13 +19,14 @@ cask "dmde" do
     end
   end
 
-  # auto_updates true
-  
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 10.14 mojave but 13.0 ventura is the lowest we can use
   conflicts_with cask: "dmde@beta"
+  # auto_updates true
+
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 10.14 mojave but 13.0 ventura is the lowest we can use
 
   app "dmde.app", target: "DMDE.app"
+
   bundle_id = "com.dmde.DMDE"
 
   zap trash: [
@@ -32,5 +36,4 @@ cask "dmde" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 end

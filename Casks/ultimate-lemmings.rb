@@ -1,11 +1,14 @@
 cask "ultimate-lemmings" do
-
   version "2.4.2,build106"
   sha256 "72bf292f33c98cb8b198d2c0fe52cd6ff3fb63a013aa4214b820e4bac868b1ec"
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version.csv.first}/UltimateLemmings-#{version.csv.first}-#{version.csv.second}.zip"
   name "Ultimate Lemmings"
+<<<<<<< Updated upstream
   desc "Unofficial native port of the 2D Lemmings games - all soundtracks included"
+=======
+  desc "Unofficial native macOS port of the 2D Lemmings games. All soundtracks included" # rubocop:todo Cask/Desc
+>>>>>>> Stashed changes
   homepage "https://www.reddit.com/r/macgaming/comments/1x0myc9/ultimate_lemmings_all_2d_lemmings_for_modern_macs/"
 
   livecheck do
@@ -21,14 +24,19 @@ cask "ultimate-lemmings" do
     end
   end
 
-  # auto_updates true
-  
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 12.3 monterey but 13.0 ventura is the lowest we can use
   conflicts_with cask: "ultimate-lemmings@slim"
+  # auto_updates true
+
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 12.3 monterey but 13.0 ventura is the lowest we can use
 
   app "Ultimate Lemmings.app"
+
   bundle_id = "academy.glasscode.lemmings"
+
+  postflight_steps do
+    remove "__MACOSX", recursive: true
+  end
 
   zap trash: [
     "~/Library/Application Support/#{bundle_id}",
@@ -37,9 +45,4 @@ cask "ultimate-lemmings" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
-  postflight_steps do
-    remove "__MACOSX", recursive: true
-  end
-
 end

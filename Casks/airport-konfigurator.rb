@@ -1,5 +1,4 @@
 cask "airport-konfigurator" do
-
   version "1.0"
   sha256 :no_check
 
@@ -17,26 +16,27 @@ cask "airport-konfigurator" do
 
   depends_on arch: [:arm64, :intel]
   depends_on macos: :tahoe
+
   # conflicts_with cask: ""
 
   app "AirPortKonfigurator.app"
+
   bundle_id = "de.iwerkstatt.airportkonfigurator"
 
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/AirPortKonfigurator.app"]
+    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+  end
+
   zap trash: [
+    "~/Library/Application Scripts/#{bundle_id}",
     "~/Library/Application Support/#{bundle_id}",
     "~/Library/Caches/#{bundle_id}",
+    "~/Library/Containers/#{bundle_id}",
     "~/Library/HTTPStorages/#{bundle_id}",
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
-
-    "~/Library/Application Scripts/#{bundle_id}",
-    "~/Library/Containers/#{bundle_id}",
   ]
-
-  postflight_steps do
-    run "/usr/bin/xattr", args: [ "-dr", "com.apple.quarantine", "{{appdir}}/AirPortKonfigurator.app" ]
-    run "/bin/echo", args: [ "🦠 Removed quarantine from {{token}}." ], print_stdout: true
-  end
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -47,7 +47,6 @@ cask "airport-konfigurator" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
 end

@@ -1,11 +1,14 @@
 cask "notational-velocity" do
-
   version "2.5.2"
   sha256 "f84ebcef767ad6191850902b4576d6b8136e059ccc61b22874cf372c8b8e7f8b"
 
   url "https://github.com/scrod/nv/releases/download/v#{version}/NotationalVelocity-#{version}.zip"
   name "Notational Velocity"
+<<<<<<< Updated upstream
   desc "Modeless, mouseless note-taking application"
+=======
+  desc "Modeless, mouseless macOS note-taking application" # rubocop:todo Cask/Desc
+>>>>>>> Stashed changes
   homepage "https://github.com/scrod/nv"
 
   livecheck do
@@ -14,12 +17,14 @@ cask "notational-velocity" do
   end
 
   # auto_updates true
-  
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 11.5 big sur but 13.0 ventura is the lowest we can use
+
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 11.5 big sur but 13.0 ventura is the lowest we can use
+
   # conflicts_with cask: ""
-  
+
   app "Notational Velocity.app"
+
   bundle_id = "net.notational.velocity"
 
   zap trash: [
@@ -29,5 +34,4 @@ cask "notational-velocity" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 end

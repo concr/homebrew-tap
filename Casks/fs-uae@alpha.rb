@@ -1,8 +1,7 @@
 cask "fs-uae@alpha" do
-
   arch arm: "arm64", intel: "x86_64"
-    version "5.0.7"
-  
+
+  version "5.0.7"
   # curl -sL https://fs-uae.net/alpha/5.0.7/FS-UAE-5.0.7-arm64-apple-darwin.dmg | shasum -a 256
   # curl -sL https://fs-uae.net/alpha/5.0.7/FS-UAE-5.0.7-x86_64-apple-darwin.dmg | shasum -a 256
   sha256 arm:   "6a98d9a17c3a3e0e8b1b63cce7c2a809ac77cd8b98f9758c9797bcd9ec62082d",
@@ -18,13 +17,14 @@ cask "fs-uae@alpha" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  conflicts_with cask: "fs-uae-emulator"
   # auto_updates true
 
-  depends_on arch: [ :arm64 ]
-  depends_on macos: :ventura  # runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
-  conflicts_with cask: "fs-uae-emulator"
+  depends_on arch: [:arm64]
+  depends_on macos: :ventura # runs from 10.13 high sierra but 13.0 ventura is the lowest we can use
 
   app "FS-UAE.app"
+
   bundle_id = "net.fs-uae.FS-UAE"
 
   zap trash: [
@@ -34,5 +34,4 @@ cask "fs-uae@alpha" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 end

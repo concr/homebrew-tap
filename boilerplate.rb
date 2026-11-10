@@ -17,7 +17,6 @@
 # =============================================================================
 
 cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
-
   # ---------------------------------------------------------------------------
   # Local variables (your own). Define them BEFORE first use, at this top
   # level, NOT inside a do…end block (they wouldn't be visible outside it).
@@ -48,9 +47,9 @@ cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
   #                version.major_minor, version.no_dots, version.dots_to_underscores
   # Use `version :latest` together with `sha256 :no_check` for an unversioned URL.
   version "1.0.0"
-
   # shasum -a 256 <download>
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+
   #
   # Different checksums per architecture (used with `arch` above):
   # sha256 arm:   "aaaa…",
@@ -99,7 +98,7 @@ cask "my-app" do # token: lowercase, words joined with "-", no "app"/"for-mac"
   #     using:      :post,                        # or :curl, :git, :homebrew_curl, …
   #     data:       { "file" => "MyApp.dmg" }     # POST body (with using: :post)
 
-  name "My App"                                   # official name; can repeat for aliases
+  name "My App" # official name; can repeat for aliases
   # name "MyApp Pro"
   desc "Short description, no app name, no trailing period, <80 chars"
   homepage "https://example.com/"

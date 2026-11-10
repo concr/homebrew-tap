@@ -1,11 +1,14 @@
 cask "m5uploader" do
-
   version "1.1.2"
   sha256 "69d9e8c1689f0c450a3f800efd0024b7ca044f64dd5acafa347c81a4d3a6b1ba"
 
   url "https://github.com/cryptspeak/m5uploader/releases/download/v#{version}/m5uploader-macos.zip"
   name "m5uploader"
+<<<<<<< Updated upstream
   desc "A minimal, security-conscious replacement for m5Burner"
+=======
+  desc "Minimal, security-conscious replacement for m5Burner"
+>>>>>>> Stashed changes
   homepage "https://github.com/cryptspeak/m5uploader"
 
   livecheck do
@@ -15,12 +18,12 @@ cask "m5uploader" do
 
   # auto_updates true
 
-  depends_on arch: [ :arm64 ]
-  depends_on macos: :ventura  # runs from 11.0 big sur but 13.0 ventura is the lowest we can use
+  depends_on arch: [:arm64]
+  depends_on macos: :ventura # runs from 11.0 big sur but 13.0 ventura is the lowest we can use
+
   # conflicts_with cask: ""
 
   app "m5uploader-macos.app", target: "m5uploader.app"
-
   binary "#{appdir}/M5Uploader.app/Contents/MacOS/m5uploader-macos", target: "m5uploader"
 
   postflight_steps do
@@ -37,7 +40,6 @@ cask "m5uploader" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
 end

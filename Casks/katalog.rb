@@ -1,5 +1,4 @@
 cask "katalog" do
-
   version "0.10.9,738"
   sha256 "6622543c6eae35b8a9ded19e4f2c30e96afbc544344eb90be6f2981e9642ceaa"
 
@@ -17,12 +16,13 @@ cask "katalog" do
   end
 
   auto_updates true
-
-  depends_on arch: [ :arm64, :intel ]
+  depends_on arch: [:arm64, :intel]
   depends_on macos: :sonoma
+
   # conflicts_with cask: ""
 
   app "Katalog.app"
+
   bundle_id = "com.musickatalog.katalog"
 
   zap trash: [
@@ -32,5 +32,4 @@ cask "katalog" do
     "~/Library/Preferences/#{bundle_id}.plist",
     "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
-
 end

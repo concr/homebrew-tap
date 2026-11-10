@@ -1,5 +1,4 @@
 cask "xld-preservation" do
-
   version "20250302"
   sha256 "0032a5470ea4e32a11a35b8077ebf4986102891f8eb82743094f2c6621ad8aeb"
 
@@ -15,33 +14,31 @@ cask "xld-preservation" do
   end
 
   auto_updates true
-  
-  depends_on arch: [ :arm64, :intel ]
-  depends_on macos: :ventura  # runs from 10.4 lion but 13.0 ventura is the lowest we can use
   conflicts_with cask: "xld"
+  depends_on arch: [:arm64, :intel]
+  depends_on macos: :ventura # runs from 10.4 lion but 13.0 ventura is the lowest we can use
 
   app "XLD.app"
   bundle_id = "jp.tmkk.XLD"
 
   command_wrapper "xld",
-    executable: "#{appdir}/XLD.app/Contents/MacOS/XLD",
-    args: "--cmdline"
-
-  zap trash: [
-    "~/Library/Application Support/#{bundle_id}",
-    "~/Library/Caches/#{bundle_id}",
-    "~/Library/HTTPStorages/#{bundle_id}",
-    "~/Library/Preferences/#{bundle_id}.plist",
-    "~/Library/Saved Application State/#{bundle_id}.savedState",
-
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/#{bundle_id}.sfl*",
-    "~/Library/Application Support/XLD",
-  ]
+                  executable: "#{appdir}/XLD.app/Contents/MacOS/XLD",
+                  args:       "--cmdline"
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/XLD.app"]
     run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
   end
+
+  zap trash: [
+    "~/Library/Application Support/#{bundle_id}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/#{bundle_id}.sfl*",
+    "~/Library/Application Support/XLD",
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
+  ]
 
   # caveats <<~EOS
   #   #{token} is not notarized by Apple. On first launch macOS will block it:
@@ -52,8 +49,6 @@ cask "xld-preservation" do
   # EOS
 
   # caveats do
-  #   unsigned_accessibility 
+  #   unsigned_accessibility
   # end
-
-
 end

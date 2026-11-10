@@ -68,7 +68,7 @@ bash update-cask-sha.sh Casks/ultimate-lemmings.rb 2.2.2,build99
 * xld-preservation
 
 ```bash
-# show remote recipe 
+# show remote recipe
 brew cat --cask concr/tap/[CASK]
 
 # strict check recipe
