@@ -5,7 +5,7 @@ cask "dmde" do
 
   url "https://dmde.com/download/dmde-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}-mac64-gui.dmg"
   name "DMDE"
-  desc "Powerful Data Recovery Software."
+  desc "Powerful Data Recovery Software"
   homepage "https://dmde.com"
 
   livecheck do

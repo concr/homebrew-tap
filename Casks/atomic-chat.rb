@@ -5,7 +5,7 @@ cask "atomic-chat" do
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
-  desc "Local AI app and inference engine for agents."
+  desc "Local AI app and inference engine for agents"
   homepage "https://atomic.chat"
 
   livecheck do

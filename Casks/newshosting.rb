@@ -5,7 +5,7 @@ cask "newshosting" do
 
   url "https://client-index.newshosting.com/nh/latest/newshosting.dmg"
   name "Newshosting"
-  desc "Usenet newsreader and downloader client."
+  desc "Usenet newsreader and downloader client"
   homepage "https://client-index.newshosting.com/nh/"
 
   livecheck do

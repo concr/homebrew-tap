@@ -5,7 +5,7 @@ cask "makemkv-preservation" do
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"
-  desc "Video format converter, otherwise called transcoder."
+  desc "Video format converter, otherwise called transcoder"
   homepage "https://www.makemkv.com/"
 
   livecheck do

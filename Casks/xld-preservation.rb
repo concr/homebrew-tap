@@ -6,7 +6,7 @@ cask "xld-preservation" do
   url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg"
   name "X Lossless Decoder"
   name "XLD"
-  desc "Lossless audio decoder."
+  desc "Lossless audio decoder"
   homepage "https://tmkk.undo.jp/xld/index_e.html"
 
   livecheck do
