@@ -4,11 +4,7 @@ cask "notational-velocity" do
 
   url "https://github.com/scrod/nv/releases/download/v#{version}/NotationalVelocity-#{version}.zip"
   name "Notational Velocity"
-<<<<<<< Updated upstream
   desc "Modeless, mouseless note-taking application"
-=======
-  desc "Modeless, mouseless macOS note-taking application" # rubocop:todo Cask/Desc
->>>>>>> Stashed changes
   homepage "https://github.com/scrod/nv"
 
   livecheck do

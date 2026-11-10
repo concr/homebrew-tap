@@ -4,11 +4,7 @@ cask "crystalrcm" do
 
   url "https://github.com/prayerie/CrystalRCM/releases/download/#{version}/CrystalRCM.#{version}.dmg"
   name "CrystalRCM"
-<<<<<<< Updated upstream
   desc "Enables the Steam Play experience from Linux Steam in the Steam client"
-=======
-  desc "Enables the Steam Play experience from Linux Steam in the macOS Steam client" # rubocop:todo Cask/Desc
->>>>>>> Stashed changes
   homepage "https://github.com/prayerie/CrystalRCM"
 
   livecheck do

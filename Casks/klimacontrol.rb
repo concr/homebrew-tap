@@ -4,11 +4,7 @@ cask "klimacontrol" do
 
   url "https://github.com/mlafx/Klimacontrol/releases/download/v#{version}/Klimacontrol-#{version}-mac.dmg"
   name "Klimacontrol"
-<<<<<<< Updated upstream
   desc "Midea-PortaSplit-Steuerung - lokal im LAN, Cloud optional"
-=======
-  desc "Midea-PortaSplit-Steuerung für macOS und Windows - lokal im LAN, Cloud optional" # rubocop:todo Cask/Desc
->>>>>>> Stashed changes
   homepage "https://github.com/mlafx/Klimacontrol"
 
   livecheck do

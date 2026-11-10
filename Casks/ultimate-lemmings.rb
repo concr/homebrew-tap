@@ -4,11 +4,7 @@ cask "ultimate-lemmings" do
 
   url "https://github.com/ErikVeland/Lemmings/releases/download/v#{version.csv.first}/UltimateLemmings-#{version.csv.first}-#{version.csv.second}.zip"
   name "Ultimate Lemmings"
-<<<<<<< Updated upstream
   desc "Unofficial native port of the 2D Lemmings games - all soundtracks included"
-=======
-  desc "Unofficial native macOS port of the 2D Lemmings games. All soundtracks included" # rubocop:todo Cask/Desc
->>>>>>> Stashed changes
   homepage "https://www.reddit.com/r/macgaming/comments/1x0myc9/ultimate_lemmings_all_2d_lemmings_for_modern_macs/"
 
   livecheck do
