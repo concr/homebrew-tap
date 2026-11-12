@@ -52,6 +52,7 @@ bash update-cask-sha.sh Casks/ultimate-lemmings.rb 2.2.2,build99
 * dmde
 * dmde@beta
 * fs-uae@alpha
+* kaset
 * katalog
 * klimacontrol
 * m5uploader
