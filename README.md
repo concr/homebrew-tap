@@ -79,6 +79,7 @@ brew audit --cask --strict --online concr/tap/[CASK]
 brew livecheck --cask concr/tap/[CASK]
 
 # update to new version
+cd "$(brew --repository concr/tap)"
 brew bump-cask-pr --version x.x.x [CASK]
 
 # style fix
