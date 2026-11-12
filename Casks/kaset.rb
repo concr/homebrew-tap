@@ -21,7 +21,7 @@ cask "kaset" do
 
   app "Kaset.app"
 
-  bundle_id = "cafe.moya.CrystalRCM"
+  bundle_id = "com.sertacozercan.Kaset"
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Kaset.app"]
