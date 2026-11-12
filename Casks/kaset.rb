@@ -1,10 +1,10 @@
 cask "kaset" do
   version "0.14.2"
-  sha256 "54c6ba29cb976bbd156970c2e710586883072e737f7c54615cb5c8b455ef6cc7"
+  sha256 "535e95f2ef3b9a8100753af94fce6acbf6f8791e3eadcae8530440a1e34232fd"
 
   url "https://github.com/sozercan/kaset/releases/download/v0.14.2/kaset-v#{version}.dmg"
   name "Kaset"
-  desc "The missing YouTube and YouTube Music app"
+  desc "Missing YouTube and YouTube Music app"
   homepage "https://sozercan.github.io/kaset/"
 
   livecheck do
