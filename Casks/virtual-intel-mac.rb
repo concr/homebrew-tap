@@ -25,7 +25,7 @@ cask "virtual-intel-mac" do
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Virtual Intel Mac.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+    run "/bin/echo", args: ["🦠  Removed quarantine from {{token}}."], print_stdout: true
   end
 
   zap trash: [

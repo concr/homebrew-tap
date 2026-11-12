@@ -25,7 +25,7 @@ cask "kaset" do
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Kaset.app"]
-    run "/bin/echo", args: ["🦠 Removed quarantine from {{token}}."], print_stdout: true
+    run "/bin/echo", args: ["🦠  Removed quarantine from {{token}}."], print_stdout: true
   end
 
   zap trash: [
