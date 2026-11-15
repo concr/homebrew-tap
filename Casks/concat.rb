@@ -10,11 +10,7 @@ cask "concat" do
 
   url "https://github.com/jub0t/Concat/releases/download/v#{version}/Concat-#{version}-macos-#{arch}.dmg"
   name "Concat"
-<<<<<<< Updated upstream
   desc "The truly free, open-source, local-first, cross-platform CapCut replacement"
-=======
-  desc "Truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP"
->>>>>>> Stashed changes
   homepage "https://github.com/jub0t/Concat"
 
   livecheck do

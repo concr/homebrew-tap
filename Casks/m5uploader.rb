@@ -4,11 +4,7 @@ cask "m5uploader" do
 
   url "https://github.com/cryptspeak/m5uploader/releases/download/v#{version}/m5uploader-macos.zip"
   name "m5uploader"
-<<<<<<< Updated upstream
   desc "A minimal, security-conscious replacement for m5Burner"
-=======
-  desc "Minimal, security-conscious replacement for m5Burner"
->>>>>>> Stashed changes
   homepage "https://github.com/cryptspeak/m5uploader"
 
   livecheck do

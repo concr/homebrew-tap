@@ -5,11 +5,7 @@ cask "dmde@beta" do
   url "https://dmde.com/download/dmde-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}-beta-mac64-gui.dmg"
   name "DMDE"
   desc "Powerful Data Recovery Software"
-<<<<<<< Updated upstream
   homepage "https://dmde.com"
-=======
-  homepage "https://dmde.com/"
->>>>>>> Stashed changes
 
   livecheck do
     url "https://dmde.com/download.html"

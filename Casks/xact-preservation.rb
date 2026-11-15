@@ -5,13 +5,8 @@ cask "xact-preservation" do
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   name "X Audio Compression Toolkit"
   name "xACT"
-<<<<<<< Updated upstream
   desc "Encodes and decodes FLAC, SHN, Monkey's Audio, TTA, Wavpack, and Apple Lossless"
   homepage "http://xact.scottcbrown.org"
-=======
-  desc "Encodes and decodes FLAC, SHN, Monkey’s Audio, TTA, Wavpack, and Apple Lossless files"
-  homepage "http://xact.scottcbrown.org/"
->>>>>>> Stashed changes
 
   livecheck do
     url :homepage
