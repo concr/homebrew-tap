@@ -1,11 +1,11 @@
 cask "atomic-chat" do
-  version "2.3.5"
-  sha256 "b3052671950e4437bf73d8275b9c959b819b79d90259f5bf7904b3660f663599"
+  version "2.4.5"
+  sha256 "38904ca55b558d4d33027c763dc7d9857e5bf9df6591accd7031ccc6709df807"
 
   url "https://github.com/AtomicBot-ai/Atomic-Chat/releases/download/v#{version}/Atomic.Chat_#{version}_universal.dmg"
   name "Atomic Chat"
   desc "Local AI app and inference engine for agents"
-  homepage "https://atomic.chat"
+  homepage "https://atomic.chat/"
 
   livecheck do
     url :url
