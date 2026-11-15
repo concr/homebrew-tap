@@ -1,6 +1,6 @@
 cask "klimacontrol" do
-  version "1.2.0.0"
-  sha256 "e88cb977a6dbbbf1c9db845eedb4e74c5481cb035613a489e29ba355b1942998"
+  version "1.3.0.1"
+  sha256 "4110d11db34a0712df9816a0b847f6ea664be5bb8f119eac7519404a4562b324"
 
   url "https://github.com/mlafx/Klimacontrol/releases/download/v#{version}/Klimacontrol-#{version}-mac.dmg"
   name "Klimacontrol"
