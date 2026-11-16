@@ -12,11 +12,12 @@ cask "makemkv-preservation" do
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
-  conflicts_with cask: "makemkv"
   # auto_updates true
 
   depends_on arch: [:arm64, :intel]
-  depends_on macos: :ventura # runs from 10.7 lion but 13.0 ventura is the lowest we can use
+  # depends_on macos: :ventura # runs from 10.7 lion but 13.0 ventura is the lowest we can use
+
+  conflicts_with cask: "makemkv"
 
   app "MakeMKV.app"
   bundle_id = "com.makemkv.MakeMKV"

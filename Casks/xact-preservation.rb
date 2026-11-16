@@ -14,9 +14,11 @@ cask "xact-preservation" do
   end
 
   auto_updates true
-  conflicts_with cask: "xact"
+
   depends_on arch: [:arm64, :intel]
-  depends_on macos: :ventura # xact from 10.13 mojave but 13.0 ventura is the lowest we can use
+  # depends_on macos: :ventura # xact from 10.13 mojave but 13.0 ventura is the lowest we can use
+
+  conflicts_with cask: "xact"
 
   app "xACT#{version}/xACT.app"
 

@@ -12,7 +12,7 @@ cask "klimacontrol" do
     strategy :github_latest
   end
 
-  # auto_updates true
+  auto_updates true
 
   depends_on arch: [:arm64, :intel]
   depends_on macos: :sequoia

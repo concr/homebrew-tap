@@ -14,12 +14,13 @@ cask "dmde" do
       page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]}" }
     end
   end
-
-  conflicts_with cask: "dmde@beta"
+  
   # auto_updates true
 
   depends_on arch: [:arm64, :intel]
-  depends_on macos: :ventura # runs from 10.14 mojave but 13.0 ventura is the lowest we can use
+  # depends_on macos: :ventura # runs from 10.14 mojave but 13.0 ventura is the lowest we can use
+
+  conflicts_with cask: "dmde@beta"
 
   app "dmde.app", target: "DMDE.app"
 
