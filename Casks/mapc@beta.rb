@@ -1,6 +1,6 @@
 cask "mapc@beta" do
-  version "1.1.28"
-  sha256 "3bd0960a5e58192bf4d6d28814968de3bd4f1ae8f7de5323a09afa82f3fc797b"
+  version "1.1.33"
+  sha256 "d2129be333392566b5e7a5b417f9f9788c31b25958c53919f58001f99b551f23"
 
   url "https://github.com/abduzeedo/mapc-site/releases/download/v#{version}/MaPC.dmg"
   name "MaPC"
